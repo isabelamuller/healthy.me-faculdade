@@ -8,7 +8,7 @@
   --color-brown: #321d05;
 }
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 .hero-landing-page {
   width: 100%;
@@ -87,7 +87,7 @@ html {
 .contact-btn {
   border: none;
   background-color: var(--color-brown);
-  color: var(--color-white);
+  color: var(--color-beige);
   padding: 0.9rem 1.4rem 0.9rem 1.4rem;
   border-radius: 100px;
   cursor: pointer;
@@ -128,19 +128,18 @@ html {
 }
 
 .main-content {
-    text-align: center;
-    margin-top: 5rem;
-    
+  text-align: center;
+  margin-top: 5rem;
 }
 .title-main {
   padding-bottom: 2rem;
   position: relative;
 }
 .main-cover-img {
-    max-width: 40rem;
-    width: 100%;
-    padding-bottom: 1rem;
-    z-index: 9999;
+  max-width: 40rem;
+  width: 100%;
+  padding-bottom: 1rem;
+  z-index: 9999;
 }
 .title-main h2 {
   font-weight: 500;
@@ -148,62 +147,102 @@ html {
   position: relative;
 }
 .main-description {
-    max-width: 45rem;
-    width: 100%;
-    position: relative;
+  max-width: 45rem;
+  width: 100%;
+  position: relative;
 }
 .main-description p {
-    font-size: 1.3rem;
-    line-height: 30px;
-    font-weight: 300;
-    padding-bottom: 2rem;
-    background-color: var(--color-beige);
-    border-radius: 5px;
+  font-size: 1.3rem;
+  line-height: 30px;
+  font-weight: 300;
+  padding-bottom: 2rem;
+  background-color: var(--color-beige);
+  border-radius: 5px;
 }
 .quiz-btn {
-    border: none;
-    background-color: var(--color-brown);
-    color: var(--color-white);
-    padding: 0.9rem 1.4rem 0.9rem 1.4rem;
-    border-radius: 100px;
-    cursor: pointer;
-    text-transform: uppercase;
-    font-size: 1rem;
-    box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.1);
-    transition-duration: 200ms;
+  border: none;
+  background-color: var(--color-brown);
+  color: var(--color-beige);
+  padding: 0.9rem 1.4rem 0.9rem 1.4rem;
+  border-radius: 100px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: 1rem;
+  box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.1);
+  transition-duration: 200ms;
 }
 .quiz-btn:hover {
-    transition-duration: 200ms;
-    transform:scale(.95)
+  transition-duration: 200ms;
+  transform: scale(0.95);
 }
 .plant1-img {
-    max-width: 20rem;
-    width: 100%;
-    height: auto;
-    object-fit: contain;
+  max-width: 20rem;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
 }
 .plant1-container {
-    position: absolute;
-    z-index: 0;
+  position: absolute;
+  z-index: 0;
 }
 
 .bold-word {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 .guy-img {
-    max-width: 25rem;
-    width: 100%;
+  max-width: 25rem;
+  width: 100%;
+  height: auto;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  transform: rotateY(180deg);
+}
+
+.main-blob-img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  object-fit: contain;
+}
+.music-btn {
+  background-color: var(--color-beige);
+  border: 1px solid var(--color-lighter-brown);
+  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+  color: var(--color-brown);
+  cursor: pointer;
+  background-image: url("https://cdn.icon-icons.com/icons2/2226/PNG/512/play_icon_134504.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 0.8rem auto;
+}
+
+.settings-container {
+  position: fixed;
+  bottom: 0;
+  left: 4rem;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .5rem;
+}
+
+.settings {
+  height: 10rem;
+  width: 0.3rem;
+  background-color: var(--color-lighter-brown);
+}
+
+.dark-btn {
+    width: 1rem;
     height: auto;
-    position: absolute;
-    bottom:10px;
-    right: 10px;
-    transform: rotateY(180deg);
+    cursor: pointer;
+    display: block;
 }
-
-.main-blob-img{
-    position: absolute;
-    top: 0;
-    right: 0;
-    object-fit: contain;
+.light-btn {
+    display: none;
+    width: 1.1rem;
+    height: auto;
+    cursor: pointer;
 }
-
