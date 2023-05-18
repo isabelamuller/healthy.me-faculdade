@@ -13,10 +13,14 @@ const togglePlayMusic = () => {
 };
 
 const pauseMusic = () => {
-  music.pause();
-  musicPlay = false;
-  musicBtn.style.backgroundImage =
-    'url("https://cdn.icon-icons.com/icons2/2226/PNG/512/play_icon_134504.png")';
+  try {
+      music.pause();
+    musicPlay = false;
+    musicBtn.style.backgroundImage =
+      'url("https://cdn.icon-icons.com/icons2/2226/PNG/512/play_icon_134504.png")';
+  } catch {
+    console.error(error)
+  }
 };
 
 const playMusic = () => {
@@ -26,7 +30,7 @@ const playMusic = () => {
     musicBtn.style.backgroundImage =
       'url("https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-pause-512.png")';
   } catch {
-    console.log(error);
+    console.error(error);
   }
 };
 
