@@ -4,6 +4,7 @@ const music = document.getElementById("music");
 const musicBtn = document.getElementById("music-btn");
 const darkBtn = document.getElementById("dark-btn");
 const lightBtn = document.getElementById("light-btn");
+
 musicBtn.addEventListener("click", () => {
   togglePlayMusic();
 });
@@ -14,12 +15,12 @@ const togglePlayMusic = () => {
 
 const pauseMusic = () => {
   try {
-      music.pause();
+    music.pause();
     musicPlay = false;
     musicBtn.style.backgroundImage =
       'url("https://cdn.icon-icons.com/icons2/2226/PNG/512/play_icon_134504.png")';
   } catch {
-    console.error(error)
+    console.error(error);
   }
 };
 
