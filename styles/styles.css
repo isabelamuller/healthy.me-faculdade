@@ -5,6 +5,14 @@
   --color-even-lighter-brown: #96897a;
   --color-beige: #fcf2e6;
   --color-brown: #321d05;
+  --color-light-blue: #eaf4f6;
+  --color-blue: #8fd9e4;
+  --color-light-purple: #f5f1ff;
+  --color-dark-purple: #7983ca;
+  --color-light-orange: #f9d8ad;
+  --color-dark-orange: #c57b59;
+  --color-dark-green: #5d6930;
+  --color-light-green: #858b60;
 }
 html {
   scroll-behavior: smooth;
@@ -320,7 +328,7 @@ html {
   font-weight: 600;
 }
 .card-description {
-  font-size: .85rem;
+  font-size: 0.85rem;
   text-align: justify;
   line-height: 17px;
   width: 100%;
@@ -329,8 +337,8 @@ html {
   width: 2rem;
   height: auto;
   position: absolute;
-  top: .6rem;
-  left: .8rem;
+  top: 0.6rem;
+  left: 0.8rem;
 }
 
 .info-page {
@@ -342,7 +350,7 @@ html {
   grid-template-columns: 1fr 1fr;
   justify-content: center;
   place-items: center;
-  gap:2rem;
+  gap: 2rem;
 }
 
 .info-left-side {
@@ -355,12 +363,15 @@ html {
 }
 
 .information-display-container {
-  width: 75%;
-  height: 80%;
+  width: 70%;
+  height: 75%;
   margin-top: 5rem;
   margin-right: 4rem;
-  border: 2px solid black;
+  background-color: var(--color-light-green);
+  border-radius: 5px;
+  padding: 2rem 2rem 2rem 2rem;
 }
+
 .info-right-side {
   grid-column: 2;
   width: 100%;
@@ -368,35 +379,138 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 .info-right-content {
-  background-color: pink;
   width: 100%;
   display: flex;
   flex-direction: column;
+  align-items: center;
   padding: 1rem 4rem 1rem 1rem;
   gap: 2rem;
+}
+.info-right-content div {
+  transition-duration: 200ms;
+}
+.info-right-content div:hover {
+  transform: scale(0.97);
+  transition-duration: 200ms;
 }
 .info-right-title {
   font-size: 3rem;
   display: flex;
+  width: 100%;
   justify-content: center;
-  border-bottom: 2px solid var(--color-brown);
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--color-brown);
 }
 .info-right-content ul {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: auto auto;
+  width: 70%;
 }
-.info-box {
-  max-width: 10rem;
 
+.vitamins-info-box {
+  max-width: 100%;
+  border-radius: 5px;
+  background-color: var(--color-light-blue);
+  border: 1.5px solid var(--color-blue);
+  box-shadow: 0 0 9px 1.5px rgba(0, 0, 0, 0.1);
   height: 2rem;
   padding: 2rem 2rem 2rem 2rem;
-  background-color: red;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  position: relative;
+}
+.vitamins-info-box h1 {
+  font-size: 1rem;
+  font-weight: 500;
+  z-index: 9999;
+  text-transform: uppercase;
+}
+.vitamins-img {
+  position: absolute;
+  width: 8rem;
+  height: auto;
+  bottom: 0;
+  left: -0.2rem;
+  z-index: 0;
+}
+.exercise-info-box {
+  max-width: 100%;
+  border-radius: 5px;
+  background-color: var(--color-light-purple);
+  border: 1.5px solid var(--color-dark-purple);
+  box-shadow: 0 0 9px 1.5px rgba(0, 0, 0, 0.1);
+  height: 2rem;
+  padding: 2rem 2rem 2rem 2rem;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  position: relative;
+}
+.exercise-info-box h1 {
+  font-size: 1rem;
+  font-weight: 500;
+  z-index: 9999;
+  text-transform: uppercase;
+}
+.exercise-img {
+  position: absolute;
+  width: 7rem;
+  height: auto;
+  bottom: -0.5rem;
+  left: -0.2rem;
+  z-index: 0;
+}
+.simple-actions-info-box {
+  max-width: 100%;
+  border-radius: 5px;
+  background-color: var(--color-light-orange);
+  border: 1.5px solid var(--color-dark-orange);
+  box-shadow: 0 0 9px 1.5px rgba(0, 0, 0, 0.1);
+  height: 2rem;
+  padding: 2rem 2rem 2rem 2rem;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  position: relative;
+}
+.simple-actions-info-box h1 {
+  font-size: 1rem;
+  font-weight: 500;
+  z-index: 9999;
+  text-align: center;
+  width: 70%;
+  text-transform: uppercase;
+}
+.reading-img {
+  position: absolute;
+  width: 7rem;
+  height: auto;
+  bottom: -0.55rem;
+  left: -0.2rem;
+  z-index: 0;
 }
 #vitamins-display {
-  display: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+#vitamins-display h1 {
+  font-weight: 500;
+  font-size: 2.5rem;
+  color: var(--color-brown);
+}
+#vitamins-display p {
+  line-height: 24px;
+  color: var(--color-brown);
+}
+.info-icon {
+  width: 1rem;
+  height: auto;
 }
 #exercise-display {
   display: none;
@@ -411,5 +525,5 @@ html {
 .info-list {
   display: flex;
   flex-direction: column;
-  gap:2rem;
+  gap: 2rem;
 }
