@@ -342,7 +342,7 @@ html {
   grid-template-columns: 1fr 1fr;
   justify-content: center;
   place-items: center;
-  gap:3rem;
+  gap:2rem;
 }
 
 .info-left-side {
@@ -375,13 +375,25 @@ html {
   width: 100%;
   display: flex;
   flex-direction: column;
-  padding: 1rem 1rem 1rem 1rem;
+  padding: 1rem 4rem 1rem 1rem;
+  gap: 2rem;
 }
 .info-right-title {
   font-size: 3rem;
   display: flex;
   justify-content: center;
   border-bottom: 2px solid var(--color-brown);
+}
+.info-right-content ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.info-box {
+  max-width: 10rem;
+
+  height: 2rem;
+  padding: 2rem 2rem 2rem 2rem;
+  background-color: red;
 }
 #vitamins-display {
   display: none;
@@ -393,7 +405,7 @@ html {
   display: none;
 }
 
-.info-right-content a {
+.info-right-content div {
   cursor: pointer;
 }
 .info-list {
