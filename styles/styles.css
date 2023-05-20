@@ -226,7 +226,6 @@ html {
   grid-template-columns: 1fr 1fr;
   gap: 3rem;
   background-color: var(--color-beige);
-  user-select: none;
 }
 .mission-left-side {
   grid-column: 1;
@@ -292,16 +291,14 @@ html {
 }
 .cards-container {
   display: grid;
-  grid-template-columns: 1fr;
-  max-width:30rem;
-  background-color: red;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 30rem));
   width: 100%;
-  gap:1rem;
+  justify-content: center;
 }
 
 .card {
   padding: 1.5rem 1.5rem 1.5rem 1.5rem;
-  width: 100%;
+  max-width: 100%;
   height: auto;
   position: relative;
   border: 2px solid var(--color-even-lighter-brown);
@@ -309,7 +306,7 @@ html {
   flex-direction: column;
   border-radius: 7px;
   box-shadow: 0 0 9px 1.5px rgba(0, 0, 0, 0.1);
-  /* margin-bottom: 1rem; */
+  margin-bottom: 1rem;
 }
 .card-title {
   width: 100%;
@@ -334,4 +331,73 @@ html {
   position: absolute;
   top: .6rem;
   left: .8rem;
+}
+
+.info-page {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  background-color: var(--color-beige);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  place-items: center;
+  gap:3rem;
+}
+
+.info-left-side {
+  grid-column: 1;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.information-display-container {
+  width: 75%;
+  height: 80%;
+  margin-top: 5rem;
+  margin-right: 4rem;
+  border: 2px solid black;
+}
+.info-right-side {
+  grid-column: 2;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.info-right-content {
+  background-color: pink;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 1rem 1rem 1rem;
+}
+.info-right-title {
+  font-size: 3rem;
+  display: flex;
+  justify-content: center;
+  border-bottom: 2px solid var(--color-brown);
+}
+#vitamins-display {
+  display: none;
+}
+#exercise-display {
+  display: none;
+}
+#simple-actions-display {
+  display: none;
+}
+
+.info-right-content a {
+  cursor: pointer;
+}
+.info-list {
+  display: flex;
+  flex-direction: column;
+  gap:2rem;
 }

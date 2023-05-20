@@ -4,6 +4,40 @@ const music = document.getElementById("music");
 const musicBtn = document.getElementById("music-btn");
 const darkBtn = document.getElementById("dark-btn");
 const lightBtn = document.getElementById("light-btn");
+const vitamins = document.getElementById("vitamins");
+const vitaminsDisplay = document.getElementById("vitamins-display")
+const simpleActions = document.getElementById("simple-actions");
+const simpleActionsDisplay = document.getElementById("simple-actions-display")
+const exercise = document.getElementById("exercise");
+const exerciseDisplay = document.getElementById("exercise-display")
+const infoButtons = [vitamins, exercise, simpleActions];
+
+const toggleInfoBtn = () => {
+  const clickedButton = event.target;
+  switch (clickedButton) {
+    case vitamins:
+      vitaminsDisplay.style.display = "block"
+      simpleActionsDisplay.style.display = "none"
+      exerciseDisplay.style.display = "none"
+      break;
+    case simpleActions:
+      vitaminsDisplay.style.display = "none"
+      simpleActionsDisplay.style.display = "block"
+      exerciseDisplay.style.display = "none"
+      break;
+    case exercise:
+      vitaminsDisplay.style.display = "none"
+      simpleActionsDisplay.style.display = "none"
+      exerciseDisplay.style.display = "block"
+      break;
+    default:
+      break;
+  }
+};
+
+infoButtons.forEach((button) => {
+  button.addEventListener("click", toggleInfoBtn);
+});
 
 musicBtn.addEventListener("click", () => {
   togglePlayMusic();
