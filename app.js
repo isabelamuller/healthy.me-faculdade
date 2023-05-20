@@ -16,19 +16,19 @@ const toggleInfoBtn = () => {
   const clickedButton = event.target;
   switch (clickedButton) {
     case vitamins:
-      vitaminsDisplay.style.display = "block"
+      vitaminsDisplay.style.display = "flex"
       simpleActionsDisplay.style.display = "none"
       exerciseDisplay.style.display = "none"
       break;
     case simpleActions:
       vitaminsDisplay.style.display = "none"
-      simpleActionsDisplay.style.display = "block"
+      simpleActionsDisplay.style.display = "flex"
       exerciseDisplay.style.display = "none"
       break;
     case exercise:
       vitaminsDisplay.style.display = "none"
       simpleActionsDisplay.style.display = "none"
-      exerciseDisplay.style.display = "block"
+      exerciseDisplay.style.display = "flex"
       break;
     default:
       break;
