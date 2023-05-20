@@ -390,6 +390,7 @@ html {
 }
 .info-box {
   max-width: 10rem;
+
   height: 2rem;
   padding: 2rem 2rem 2rem 2rem;
   background-color: red;
