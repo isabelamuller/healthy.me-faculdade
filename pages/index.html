@@ -16,7 +16,7 @@
     <title>healthy.me | better lifestyle</title>
   </head>
   <body>
-    <nav class="navbar-landing-page">
+    <nav class="navbar">
       <div class="logo-container">
         <a href="#about-us"
           ><img class="logo-img" src="../assets/images/logo.png"
@@ -34,7 +34,7 @@
             <a href="#info-page">info</a>
           </li>
           <li class="nav-menu-item">
-            <a>may challenge</a>
+            <a href="#monthly-challenge">may challenge</a>
           </li>
           <li class="nav-menu-item">
             <button class="contact-btn">contact us</button>
@@ -254,6 +254,9 @@
           <div id="simple-actions-display">
             <h1>simple actions</h1>
           </div>
+          <div id="sports-display">
+            <h1>sports</h1>
+          </div>
         </div>
       </div>
       <div class="info-right-side">
@@ -263,33 +266,124 @@
           <ul class="info-list">
             <li>
               <div class="vitamins-info-box" id="vitamins">
-                <img class="vitamins-img" src="../assets/images/vitamins.png" />
+                <img src="../assets/images/vitamins.png" />
                 <h1>vitamins</h1>
               </div>
             </li>
             <li>
               <div class="exercise-info-box" id="exercise">
-                <img class="exercise-img" src="../assets/images/exercise.png" />
+                <img src="../assets/images/exercise.png" />
                 <h1>exercise</h1>
               </div>
             </li>
             <li>
-              <div class="simple-actions-info-box" id="simple-actions">
-                <img class="reading-img" src="../assets/images/reading.png" />
-                <h1>simple actions</h1>
+              <div class="sports-info-box" id="sports">
+                <img src="../assets/images/sports.png" />
+                <h1>sports</h1>
               </div>
             </li>
             <li>
-              <div class="sports-info-box" id="simple-actions">
-                <img class="reading-img" src="../assets/images/reading.png" />
-                <h1>sports</h1>
+              <div class="simple-actions-info-box" id="simple-actions">
+                <img src="../assets/images/reading.png" />
+                <h1>simple actions</h1>
               </div>
             </li>
           </ul>
         </div>
       </div>
     </section>
-
+    <section class="challenge-page" id="monthly-challenge">
+      <div class="challenge-container">
+        <h1 class="challenge-page-title">may challenge</h1>
+        <form id="form-challenge">
+          <input
+            type="text"
+            id="input-challenge"
+            placeholder="add your own goal!"
+          />
+            <select id="frequency-select">
+              <option selected>daily</option>
+              <option>weekly</option>
+              <option>monthly</option>
+              <option>no frequency</option>
+            </select>
+          <button type="submit" class="submit-button-challenge">add</button>
+        </form>
+        <div class="goals-container" id="goals-container">
+          <div class="goal" id="goal" >
+            <div class="goal-left-menu">
+              <input type="checkbox" class="checkbox" />
+              <h1 id="goal-title">drink 2 liters of water</h1>
+            </div>
+            <div class="goal-right-menu">
+              <h3>frequency</h3>
+              <span>daily</span>
+            </div>
+            <!-- <img src="https://cdn-icons-png.flaticon.com/512/4021/4021663.png" class=""> -->
+          </div>
+          <div class="goal" id="goal">
+            <div class="goal-left-menu">
+              <input type="checkbox" class="checkbox" id="checkbox"/>
+              <h1 id="goal-title">get 20 minutes of sunlight</h1>
+            </div>
+            <div class="goal-right-menu">
+              <h3>frequency</h3>
+              <span>daily</span>
+            </div>
+          </div>
+          <div class="goal" id="goal" >
+            <div class="goal-left-menu">
+              <input type="checkbox" class="checkbox"/>
+              <h1 id="goal-title">read 10 pages of a book</h1>
+            </div>
+            <div class="goal-right-menu">
+              <h3>frequency</h3>
+              <span>daily</span>
+            </div>
+          </div>
+          <div class="goal" id="goal">
+            <div class="goal-left-menu">
+              <input type="checkbox" class="checkbox"/>
+              <h1 id="goal-title">take your vitamins</h1>
+            </div>
+            <div class="goal-right-menu">
+              <h3>frequency</h3>
+              <span>daily</span>
+            </div>
+          </div>
+          <div class="goal" id="goal">
+            <div class="goal-left-menu">
+              <input type="checkbox" class="checkbox"/>
+              <h1 id="goal-title">20 min walk</h1>
+            </div>
+            <div class="goal-right-menu">
+              <h3>frequency</h3>
+              <span>daily</span>
+            </div>
+          </div>
+          <div class="goal" id="goal">
+            <div class="goal-left-menu">
+              <input type="checkbox" class="checkbox"/>
+              <h1 id="goal-title">reach out to an old friend</h1>
+            </div>
+            <div class="goal-right-menu">
+              <h3>frequency</h3>
+              <span>monthly</span>
+            </div>
+          </div>
+          <div class="goal" id="goal">
+            <div class="goal-left-menu">
+              <input type="checkbox" class="checkbox"/>
+              <h1 id="goal-title">compliment a stranger</h1>
+            </div>
+            <div class="goal-right-menu">
+              <h3>frequency</h3>
+              <span>weekly</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <script src="../app.js"></script>
   </body>
 </html>
