@@ -4,6 +4,7 @@
   --color-lighter-brown: #877560;
   --color-even-lighter-brown: #96897a;
   --color-beige: #fcf2e6;
+  --color-dark-beige: #eee3d4;
   --color-brown: #321d05;
   --color-light-blue: #eaf4f6;
   --color-blue: #8fd9e4;
@@ -13,6 +14,7 @@
   --color-dark-orange: #c57b59;
   --color-dark-green: #5d6930;
   --color-light-green: #878a6d;
+  --color-green: #f1ffcb;
 }
 html {
   scroll-behavior: smooth;
@@ -20,7 +22,7 @@ html {
 
 /* navbar */
 
-.navbar-landing-page {
+.navbar {
   position: fixed;
   width: 100%;
   background-color: var(--color-beige);
@@ -435,13 +437,13 @@ html {
 .info-list {
   display: grid;
   grid-template-columns: 1fr;
-  grid-gap: 2rem;
-  width: 60%;
+  grid-gap: 1.5rem;
+  width: 50%;
 }
 .info-list h1 {
   font-size: 1rem;
   font-weight: 500;
-  z-index: 9999;
+  z-index: 9998;
   text-align: center;
   width: 70%;
   text-transform: uppercase;
@@ -459,7 +461,7 @@ html {
 }
 .info-list img {
   position: absolute;
-  width: 8rem;
+  width: 6rem;
   height: auto;
   bottom: 0;
   left: -0.2rem;
@@ -478,6 +480,129 @@ html {
   border: 1.5px solid var(--color-dark-orange);
 }
 .sports-info-box {
-  background-color: var(--color-light-orange);
-  border: 1.5px solid var(--color-dark-orange);
+  background-color: var(--color-green);
+  border: 1.5px solid var(--color-light-green);
+}
+
+/* challenge page  */
+
+.challenge-page {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  background-color: var(--color-beige);
+  display: flex;
+  justify-content: center;
+  align-items: end;
+}
+.challenge-container {
+  width: 70vw;
+  height: 85vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 2rem 2rem 2rem;
+  gap: 1.5rem;
+}
+.challenge-page-title {
+  font-size: 3rem;
+  display: flex;
+  width: 70%;
+  justify-content: center;
+}
+
+/* form challenge  */
+
+#form-challenge {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  position: relative;
+  align-items: center;
+}
+#input-challenge {
+  max-width: 40rem;
+  width: 100%;
+  height: 2.5rem;
+  border: 1.5px solid var(--color-lighter-brown);
+  background-color: var(--color-dark-beige);
+  border-radius: 5px;
+  text-indent: 1rem;
+  padding-right: 3.5rem;
+  position: relative;
+  outline: none;
+}
+#frequency-select {
+  height: 2rem;
+  border: none;
+  background-color: var(--color-lighter-brown);
+  color: var(--color-white);
+  outline: none;
+  border-radius: 5px;
+}
+.submit-button-challenge {
+  border: none;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: var(--color-brown);
+  color: var(--color-beige);
+}
+
+/* goals  */
+
+.goals-container {
+  width: 75%;
+  height: 100%;
+  background-color: var(--color-dark-beige);
+  padding: 2rem 2rem 2rem 2rem;
+  border-radius: 5px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  overflow: auto;
+}
+.goal {
+  width: 90%;
+  max-height: 5rem;
+  height: 100%;
+  padding: 1rem 1rem 1rem 1rem;
+  background-color: var(--color-beige);
+  border: 2px solid var(--color-even-lighter-brown);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  flex-shrink: 0;
+}
+.goal-left-menu {
+  display: flex;
+  gap: 1rem;
+}
+.goal h1 {
+  font-weight: 500;
+  font-size: .9rem;
+  max-width: 35rem;
+  word-break: break-all;
+  line-height: 20px;
+}
+.goal-right-menu {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap:.5rem;
+}
+.goal-right-menu h3 {
+  font-size: .7rem;
+  text-transform: uppercase;
+}
+.goal-right-menu span {
+  font-size: .7rem;
 }
