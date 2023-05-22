@@ -181,7 +181,7 @@ html {
   width: 0.2rem;
   background-color: var(--color-lighter-brown);
 }
-.music-btn {
+#music-btn {
   background-color: var(--color-beige);
   border: 1px solid var(--color-lighter-brown);
   padding: 0.5rem 0.5rem 0.5rem 0.5rem;
@@ -595,14 +595,16 @@ html {
 .goal-right-menu {
   display: flex;
   justify-content: center;
-  flex-direction: column;
   align-items: center;
-  gap:.5rem;
+  gap:1rem;
 }
 .goal-right-menu h3 {
   font-size: .7rem;
   text-transform: uppercase;
+  user-select: none;
 }
-.goal-right-menu span {
-  font-size: .7rem;
+.goal-right-menu img {
+  width: 1.5rem;
+  height: auto;
+  cursor: pointer;
 }

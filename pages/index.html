@@ -16,57 +16,74 @@
     <title>healthy.me | better lifestyle</title>
   </head>
   <body>
-    <nav class="navbar">
-      <div class="logo-container">
-        <a href="#about-us"
-          ><img class="logo-img" src="../assets/images/logo.png"
-        /></a>
-      </div>
-      <div class="nav-menu-container">
-        <ul class="nav-menu-landing-page">
-          <li class="nav-menu-item">
-            <a href="#about-us">about</a>
-          </li>
-          <li class="nav-menu-item">
-            <a href="#our-mission">our mission</a>
-          </li>
-          <li class="nav-menu-item">
-            <a href="#info-page">info</a>
-          </li>
-          <li class="nav-menu-item">
-            <a href="#monthly-challenge">may challenge</a>
-          </li>
-          <li class="nav-menu-item">
-            <button class="contact-btn">contact us</button>
-          </li>
-        </ul>
-      </div>
-    </nav>
+    <header>
+      <nav class="navbar">
+        <div class="logo-container">
+          <a href="#about-us" aria-label="Healthy.me Logo"
+            ><img class="logo-img" src="../assets/images/logo.png"
+          /></a>
+        </div>
+        <div class="nav-menu-container">
+          <ul class="nav-menu-landing-page">
+            <li class="nav-menu-item">
+              <a href="#about-us" aria-label="About Us">about</a>
+            </li>
+            <li class="nav-menu-item">
+              <a href="#our-mission" aria-label="Our Mission">our mission</a>
+            </li>
+            <li class="nav-menu-item">
+              <a href="#info-page" aria-label="Information">info</a>
+            </li>
+            <li class="nav-menu-item">
+              <a href="#monthly-challenge" aria-label="Monthly Challenge"
+                >may challenge</a
+              >
+            </li>
+            <li class="nav-menu-item">
+              <button class="contact-btn" aria-label="Contact Us">
+                contact us
+              </button>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
     <section class="about-page" id="about-us">
       <div class="settings-container">
         <img
           id="dark-btn"
           class="dark-btn"
           src="https://cdn.icon-icons.com/icons2/1674/PNG/512/moon_111148.png"
+          alt="Dark Mode"
         />
         <img
           id="light-btn"
           class="light-btn"
           src="https://www.iconpacks.net/icons/2/free-sun-icon-3337-thumb.png"
+          alt="Light Mode"
         />
         <audio
           id="music"
           class="music"
           src="../assets/music/bg-music.mp3"
           preload="auto"
+          aria-label="Background Music"
         ></audio>
-        <button id="music-btn" class="music-btn"></button>
+        <button id="music-btn" aria-label="Toggle Music"></button>
         <div class="settings-line"></div>
       </div>
-      <img src="../assets/images/blob.png" class="about-blob-img" />
+      <img
+        src="../assets/images/blob.png"
+        class="about-blob-img"
+        alt="Decorative Blob Image"
+      />
       <div class="about-content">
         <div class="title-about">
-          <img src="../assets/images/cover.png" class="about-cover-img" />
+          <img
+            src="../assets/images/cover.png"
+            class="about-cover-img"
+            alt="Logo Image"
+          />
           <h2>health is just around the corner!</h2>
         </div>
         <div class="about-description">
@@ -91,7 +108,11 @@
           </p>
           <div class="cards-container">
             <div class="card">
-              <img src="../assets/images/megaphone.png" class="mission-icon" />
+              <img
+                src="../assets/images/megaphone.png"
+                class="mission-icon"
+                alt="Megaphone Icon"
+              />
               <div class="card-title">sharing is caring</div>
               <p class="card-description">
                 share information about selfcare, health, exercising and so on
@@ -100,7 +121,11 @@
               </p>
             </div>
             <div class="card">
-              <img src="../assets/images/goals.png" class="mission-icon" />
+              <img
+                src="../assets/images/goals.png"
+                class="mission-icon"
+                alt="Goals Icon"
+              />
               <div class="card-title">just a little push</div>
               <p class="card-description">
                 helping people set up healthy daily goals, such as drinking more
@@ -109,7 +134,11 @@
               </p>
             </div>
             <div class="card">
-              <img src="../assets/images/clock.png" class="mission-icon" />
+              <img
+                src="../assets/images/clock.png"
+                class="mission-icon"
+                alt="Clock Icon"
+              />
               <div class="card-title">don't forget a thing</div>
               <p class="card-description">
                 since our routines got so busy due to globalization and the rise
@@ -122,7 +151,10 @@
       </div>
       <div class="mission-right-side">
         <div class="mission-img-container">
-          <div class="mission-img"></div>
+          <div
+            class="mission-img"
+            aria-label="Illustration of a man on top of a mountain"
+          ></div>
         </div>
       </div>
     </section>
@@ -140,6 +172,7 @@
               <img
                 src="https://cdn-icons-png.flaticon.com/512/721/721098.png"
                 class="info-display-icon"
+                alt="vitamin C icon"
               />
               <strong>vitamin C</strong>: boosts immune system, promotes wound
               healing, and aids in collagen production. found in citrus fruits,
@@ -149,6 +182,7 @@
               <img
                 src="https://cdn-icons-png.flaticon.com/512/169/169367.png"
                 class="info-display-icon"
+                alt="vitamin D icon"
               />
               <strong>vitamin D</strong>: supports bone health, enhances calcium
               absorption, and helps regulate mood. naturally synthesized by the
@@ -159,6 +193,7 @@
               <img
                 src="https://cdn-icons-png.flaticon.com/512/1046/1046769.png"
                 class="info-display-icon"
+                alt="vitamin B12 icon"
               />
               <strong>vitamin B12</strong>: essential for nerve function, energy
               production, and the formation of red blood cells. found in animal
@@ -168,6 +203,7 @@
               <img
                 src="https://cdn-icons-png.flaticon.com/512/1514/1514935.png"
                 class="info-display-icon"
+                alt="vitamin A icon"
               />
               <strong>vitamin A</strong>: supports vision, immune function, and
               promotes healthy skin and mucous membranes. found in carrots,
@@ -177,6 +213,7 @@
               <img
                 src="https://cdn-icons-png.flaticon.com/512/2843/2843643.png"
                 class="info-display-icon"
+                alt="vitamin E icon"
               />
               <strong>vitamin E</strong>: acts as an antioxidant, protects cells
               from damage, and supports skin health. found in nuts and seeds,
@@ -186,6 +223,7 @@
               <img
                 src="https://cdn-icons-png.flaticon.com/512/3944/3944155.png"
                 class="info-display-icon"
+                alt="vitamin K icon"
               />
               <strong>vitamin K</strong>: helps with blood clotting, supports
               bone health, and may have a role in heart health. found in leafy
@@ -203,6 +241,7 @@
               <img
                 src="https://cdn-icons-png.flaticon.com/512/4721/4721050.png"
                 class="info-display-icon"
+                alt="Cardio icon"
               />
               <strong>cardiovascular exercise</strong>: also known as aerobic
               exercise, it includes activities like running, cycling, and
@@ -213,6 +252,7 @@
               <img
                 src="https://cdn-icons-png.flaticon.com/512/5778/5778005.png"
                 class="info-display-icon"
+                alt="Strength icon"
               />
               <strong>strength training</strong>: this involves exercises such
               as weightlifting or bodyweight exercises like push-ups and squats.
@@ -223,6 +263,7 @@
               <img
                 src="https://cdn-icons-png.flaticon.com/512/2320/2320754.png"
                 class="info-display-icon"
+                alt="Flexibility icon"
               />
               <strong>flexibility exercises</strong>: stretching exercises like
               yoga and pilates enhance flexibility, increase joint range of
@@ -233,6 +274,7 @@
               <img
                 src="https://cdn-icons-png.flaticon.com/128/5351/5351294.png"
                 class="info-display-icon"
+                alt="HIIT icon"
               />
               <strong>high-intensity interval training (HIIT)</strong>: HIIT
               workouts involve short bursts of intense exercise alternated with
@@ -244,6 +286,7 @@
               <img
                 src="https://cdn-icons-png.flaticon.com/512/4072/4072275.png"
                 class="info-display-icon"
+                alt="Balance icon"
               />
               <strong>balance and stability exercises</strong>: these exercises
               focus on improving balance and stability, which are crucial for
@@ -265,25 +308,25 @@
           <p>click on any button below to see information on the topic!</p>
           <ul class="info-list">
             <li>
-              <div class="vitamins-info-box" id="vitamins">
+              <div class="vitamins-info-box" id="vitamins" alt="vitamins icon">
                 <img src="../assets/images/vitamins.png" />
                 <h1>vitamins</h1>
               </div>
             </li>
             <li>
-              <div class="exercise-info-box" id="exercise">
+              <div class="exercise-info-box" id="exercise" alt="exercise icon">
                 <img src="../assets/images/exercise.png" />
                 <h1>exercise</h1>
               </div>
             </li>
             <li>
-              <div class="sports-info-box" id="sports">
+              <div class="sports-info-box" id="sports" alt="sports icon">
                 <img src="../assets/images/sports.png" />
                 <h1>sports</h1>
               </div>
             </li>
             <li>
-              <div class="simple-actions-info-box" id="simple-actions">
+              <div class="simple-actions-info-box" id="simple-actions" alt="simple actions icon">
                 <img src="../assets/images/reading.png" />
                 <h1>simple actions</h1>
               </div>
@@ -295,90 +338,115 @@
     <section class="challenge-page" id="monthly-challenge">
       <div class="challenge-container">
         <h1 class="challenge-page-title">may challenge</h1>
+        <p>
+          each month we have a challenge based on <strong>goals</strong>. down
+          below you can see this month's challenge and add your own goals. have
+          fun!
+        </p>
         <form id="form-challenge">
           <input
             type="text"
             id="input-challenge"
             placeholder="add your own goal!"
           />
-            <select id="frequency-select">
-              <option selected>daily</option>
-              <option>weekly</option>
-              <option>monthly</option>
-              <option>no frequency</option>
-            </select>
+          <select id="frequency-select">
+            <option selected>daily</option>
+            <option>weekly</option>
+            <option>monthly</option>
+            <option>no frequency</option>
+          </select>
           <button type="submit" class="submit-button-challenge">add</button>
         </form>
         <div class="goals-container" id="goals-container">
-          <div class="goal" id="goal" >
+          <div class="goal">
+            <div class="goal-left-menu" id="goal-left-menu">
+              <input type="checkbox" class="checkbox" />
+              <h1>drink 2 liters of water</h1>
+            </div>
+            <div class="goal-right-menu">
+              <h3>daily</h3>
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/4021/4021663.png"
+                class="delete-icon"
+              />
+            </div>
+          </div>
+          <div class="goal">
+            <div class="goal-left-menu" id="goal-left-menu">
+              <input type="checkbox" class="checkbox" />
+              <h1>get 20 minutes of sunlight</h1>
+            </div>
+            <div class="goal-right-menu">
+              <h3>daily</h3>
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/4021/4021663.png"
+                class="delete-icon"
+              />
+            </div>
+          </div>
+          <div class="goal">
             <div class="goal-left-menu">
               <input type="checkbox" class="checkbox" />
-              <h1 id="goal-title">drink 2 liters of water</h1>
+              <h1>read 10 pages of a book</h1>
             </div>
             <div class="goal-right-menu">
-              <h3>frequency</h3>
-              <span>daily</span>
-            </div>
-            <!-- <img src="https://cdn-icons-png.flaticon.com/512/4021/4021663.png" class=""> -->
-          </div>
-          <div class="goal" id="goal">
-            <div class="goal-left-menu">
-              <input type="checkbox" class="checkbox" id="checkbox"/>
-              <h1 id="goal-title">get 20 minutes of sunlight</h1>
-            </div>
-            <div class="goal-right-menu">
-              <h3>frequency</h3>
-              <span>daily</span>
+              <h3>daily</h3>
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/4021/4021663.png"
+                class="delete-icon"
+              />
             </div>
           </div>
-          <div class="goal" id="goal" >
+          <div class="goal">
             <div class="goal-left-menu">
-              <input type="checkbox" class="checkbox"/>
-              <h1 id="goal-title">read 10 pages of a book</h1>
+              <input type="checkbox" class="checkbox" />
+              <h1>take your vitamins</h1>
             </div>
             <div class="goal-right-menu">
-              <h3>frequency</h3>
-              <span>daily</span>
+              <h3>daily</h3>
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/4021/4021663.png"
+                class="delete-icon"
+              />
             </div>
           </div>
-          <div class="goal" id="goal">
+          <div class="goal">
             <div class="goal-left-menu">
-              <input type="checkbox" class="checkbox"/>
-              <h1 id="goal-title">take your vitamins</h1>
+              <input type="checkbox" class="checkbox" />
+              <h1>20 min walk</h1>
             </div>
             <div class="goal-right-menu">
-              <h3>frequency</h3>
-              <span>daily</span>
+              <h3>daily</h3>
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/4021/4021663.png"
+                class="delete-icon"
+              />
             </div>
           </div>
-          <div class="goal" id="goal">
+          <div class="goal">
             <div class="goal-left-menu">
-              <input type="checkbox" class="checkbox"/>
-              <h1 id="goal-title">20 min walk</h1>
+              <input type="checkbox" class="checkbox" />
+              <h1>reach out to an old friend</h1>
             </div>
             <div class="goal-right-menu">
-              <h3>frequency</h3>
-              <span>daily</span>
+              <h3>monthly</h3>
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/4021/4021663.png"
+                class="delete-icon"
+              />
             </div>
           </div>
-          <div class="goal" id="goal">
+          <div class="goal">
             <div class="goal-left-menu">
-              <input type="checkbox" class="checkbox"/>
-              <h1 id="goal-title">reach out to an old friend</h1>
+              <input type="checkbox" class="checkbox" />
+              <h1>compliment a stranger</h1>
             </div>
             <div class="goal-right-menu">
-              <h3>frequency</h3>
-              <span>monthly</span>
-            </div>
-          </div>
-          <div class="goal" id="goal">
-            <div class="goal-left-menu">
-              <input type="checkbox" class="checkbox"/>
-              <h1 id="goal-title">compliment a stranger</h1>
-            </div>
-            <div class="goal-right-menu">
-              <h3>frequency</h3>
-              <span>weekly</span>
+              <h3>weekly</h3>
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/4021/4021663.png"
+                class="delete-icon"
+              />
             </div>
           </div>
         </div>

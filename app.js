@@ -1,6 +1,7 @@
 let musicPlay = false;
 let darkMode;
 let frequency = "daily";
+let deletedGoals = []
 const music = document.getElementById("music");
 const musicBtn = document.getElementById("music-btn");
 const darkBtn = document.getElementById("dark-btn");
@@ -18,9 +19,12 @@ const formChallenge = document.getElementById("form-challenge");
 const inputChallenge = document.getElementById("input-challenge");
 const goalsContainer = document.getElementById("goals-container");
 const selectFrequency = document.getElementById("frequency-select");
+const deleteButtons = document.querySelectorAll(".delete-icon");
 
-const toggleInfoBtn = () => {
-  const clickedButton = event.target;
+// display info page 
+
+const toggleInfoBtn = (e) => {
+  const clickedButton = e.target;
   switch (clickedButton) {
     case vitamins:
       vitaminsDisplay.style.display = "flex";
@@ -55,6 +59,8 @@ infoButtons.forEach((button) => {
   button.addEventListener("click", toggleInfoBtn);
 });
 
+// play music 
+
 musicBtn.addEventListener("click", () => {
   togglePlayMusic();
 });
@@ -85,6 +91,8 @@ const playMusic = () => {
   }
 };
 
+// dark mode 
+
 darkBtn.addEventListener("click", () => {
   toggleLightMode();
 });
@@ -105,6 +113,9 @@ const toggleDarkMode = () => {
   darkMode = true;
 };
 
+// new goal creation 
+
+
 formChallenge.addEventListener("submit", (e) => {
   e.preventDefault();
   const inputValue = inputChallenge.value.trim();
@@ -112,7 +123,7 @@ formChallenge.addEventListener("submit", (e) => {
     const goal = document.createElement("div");
     goal.classList.add("goal");
     const titleWrapper = document.createElement("div");
-    titleWrapper.classList.add("goal-left-menu")
+    titleWrapper.classList.add("goal-left-menu");
     const checkbox = document.createElement("input");
     checkbox.type = "checkbox";
     const title = document.createElement("h1");
@@ -120,22 +131,37 @@ formChallenge.addEventListener("submit", (e) => {
     title.textContent = inputValue;
     const rightMenu = document.createElement("div");
     rightMenu.classList.add("goal-right-menu");
-    const frequencyText = document.createElement("h3");
-    frequencyText.textContent = "frequency"
-    const frequencyValue = document.createElement("span");
+    const frequencyValue = document.createElement("h3");
     frequencyValue.textContent = frequency;
-   
+    const deletedButton = document.createElement("img")
+    deletedButton.src = "https://cdn-icons-png.flaticon.com/512/4021/4021663.png"
+    deletedButton.classList.add("delete-icon")
+    
     goalsContainer.appendChild(goal);
     goal.appendChild(titleWrapper);
     titleWrapper.appendChild(checkbox);
     titleWrapper.appendChild(title);
     goal.appendChild(rightMenu);
-    rightMenu.appendChild(frequencyText)
-    rightMenu.appendChild(frequencyValue)
+    rightMenu.appendChild(frequencyValue);
+    rightMenu.appendChild(deletedButton)
     inputChallenge.value = "";
   }
 });
-
 selectFrequency.addEventListener("change", () => {
   frequency = selectFrequency.value;
+});
+
+// delete goal 
+
+goalsContainer.addEventListener('click', (e) => {
+  const clickedElement = e.target;
+
+  if (clickedElement.classList.contains('delete-icon')) {
+    const rightMenu = clickedElement.parentElement;
+    const goal = rightMenu.parentElement;
+
+    deletedGoals.push(goal);
+    goal.remove();
+    console.log(deletedGoals);
+  }
 });
