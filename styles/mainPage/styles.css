@@ -18,6 +18,7 @@
 }
 html {
   scroll-behavior: smooth;
+  background-color: var(--color-beige);
 }
 
 /* navbar */
@@ -32,6 +33,16 @@ html {
   align-items: center;
   z-index: 9999;
   gap: 2rem;
+}
+.navbar-quiz {
+  position: fixed;
+  width: 100%;
+  background-color: var(--color-beige);
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
 }
 .logo-container {
   width: auto;
@@ -50,6 +61,10 @@ html {
   justify-content: end;
   margin-right: 2.5rem;
   grid-column: 2;
+}
+.nav-menu-container-quiz {
+  left: 2.5rem;
+  position: absolute;
 }
 .nav-menu-landing-page {
   align-items: center;
@@ -90,7 +105,7 @@ html {
   justify-content: center;
   align-items: center;
   background-color: var(--color-beige);
-  background-image: url("../assets/images/plant1.png");
+  background-image: url("../../assets/images/plant1.png");
   background-repeat: no-repeat;
   background-position: left 5% bottom;
   background-size: 20rem auto;
@@ -324,7 +339,7 @@ html {
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url("../assets/images/mission2.png");
+  background-image: url("../../assets/images/mission2.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -337,13 +352,17 @@ html {
   width: 100vw;
   position: relative;
   background-color: var(--color-beige);
+}
+.info-page-container {
+  width: 100%;
+  height: 100%;
+  margin-top: 5rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-content: center;
   place-items: center;
   gap: 2rem;
 }
-
 /* information page left side */
 
 .info-left-side {
@@ -566,6 +585,7 @@ html {
   align-items: center;
   gap: 1rem;
   overflow: auto;
+  text-align: center;
 }
 .goal {
   width: 90%;
