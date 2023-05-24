@@ -55,5 +55,9 @@
 }
 #question-2 {
     display: none;
-    width: 60%;
+    width: 80%;
+}
+#question-3 {
+    display: none;
+    width: 80%;
 }
