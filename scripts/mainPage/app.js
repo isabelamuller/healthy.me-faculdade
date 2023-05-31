@@ -34,7 +34,7 @@ let goals = [
     id: 6,
   },
   {
-    title: "elogiar ume estranho",
+    title: "elogiar um estranho",
     frequency: "semanal",
     id: 7,
   },
@@ -55,13 +55,8 @@ const infoButtons = [vitamins, exercise, simpleActions, sports];
 const formChallenge = document.getElementById("form-challenge");
 const inputChallenge = document.getElementById("input-challenge");
 const goalsContainer = document.getElementById("goals-container");
-const deletedGoalsContainer = document.getElementById(
-  "deleted-goals-container"
-);
 const selectFrequency = document.getElementById("frequency-select");
 const deleteButtons = document.querySelectorAll(".delete-icon");
-const showDeletedGoals = document.getElementById("deleted-goals-btn");
-const showActiveGoals = document.getElementById("non-deleted-goals-btn");
 
 // display info page
 
@@ -157,7 +152,7 @@ const toggleDarkMode = () => {
 
 // new goal creation
 
-const newGoal = (goal, container) => {
+const newGoal = (goal) => {
   const goalElement = document.createElement("div");
   goalElement.classList.add("goal");
   goalElement.id = goal.id;
@@ -182,7 +177,7 @@ const newGoal = (goal, container) => {
   deleteButton.src = "https://cdn-icons-png.flaticon.com/512/4021/4021663.png";
   deleteButton.classList.add("delete-icon");
 
-  container.appendChild(goalElement);
+  goalsContainer.appendChild(goalElement);
   goalElement.appendChild(titleWrapper);
   titleWrapper.appendChild(checkbox);
   titleWrapper.appendChild(titleElement);
@@ -191,7 +186,7 @@ const newGoal = (goal, container) => {
   rightMenu.appendChild(deleteButton);
 };
 
-// add goal to dom
+// add goal to dom 
 
 const addGoal = (e) => {
   e.preventDefault();
@@ -203,7 +198,7 @@ const addGoal = (e) => {
       frequency: frequency,
       id: id,
     };
-    newGoal(goal, goalsContainer);
+    newGoal(goal);
     goals.push(goal);
     saveGoalsToLocalStorage();
   }
@@ -227,24 +222,25 @@ goalsContainer.addEventListener("click", (e) => {
     let goalId = parseInt(goal.id);
     const objectToRemove = goals.find((g) => g.id === goalId);
     deletedGoals.push(objectToRemove);
-    console.log(deletedGoals);
+    console.log(deletedGoals)
     goals = goals.filter((g) => g !== objectToRemove);
     saveGoalsToLocalStorage(goals);
-    saveDeletedGoalsToLocalStorage(deletedGoals);
+    saveDeletedGoalsToLocalStorage(deletedGoals)
   }
   saveGoalsToLocalStorage();
 });
 
-// save localStorage
+// save localStorage 
 
 const saveGoalsToLocalStorage = () => {
   localStorage.setItem("goals", JSON.stringify(goals));
 };
+
 const saveDeletedGoalsToLocalStorage = () => {
   localStorage.setItem("deletedGoals", JSON.stringify(deletedGoals));
 };
 
-// load localStorage
+// load localStorage 
 
 const loadGoalsFromLocalStorage = () => {
   const storedGoals = localStorage.getItem("goals");
@@ -255,48 +251,11 @@ const loadGoalsFromLocalStorage = () => {
     const deletedGoalIds = deletedGoals.map((goal) => goal.id);
     goals = goals.filter((goal) => !deletedGoalIds.includes(goal.id));
     goals.forEach((goal) => {
-      newGoal(goal, goalsContainer);
+      newGoal(goal);
     });
   }
 };
 
-// show deleted goals
+// function calls 
 
-showDeletedGoals.addEventListener("click", () => {
-  toggleDeletedGoalsContainer();
-});
-
-const toggleDeletedGoalsContainer = () => {
-  if (deletedGoalsContainer.style.display === "none") {
-    displayDeletedGoals();
-    deletedGoalsContainer.style.display = "flex";
-    goalsContainer.style.display = "none";
-  } else {
-    deletedGoalsContainer.style.display = "none";
-    goalsContainer.style.display = "flex";
-  }
-};
-
-const displayDeletedGoals = () => {
-  deletedGoals.forEach((goal) => {
-   newGoal(goal, deletedGoalsContainer)
-  });
-};
-
-showActiveGoals.addEventListener("click", () => {
-  toggleActiveGoalsContainer();
-});
-
-const toggleActiveGoalsContainer = () => {
-  if (deletedGoalsContainer.style.display === "flex") {
-    displayDeletedGoals();
-    deletedGoalsContainer.style.display = "none";
-    goalsContainer.style.display = "flex";
-  } else {
-    deletedGoalsContainer.style.display = "flex";
-    goalsContainer.style.display = "none";
-  }
-}
-
-saveGoalsToLocalStorage(goals);
 loadGoalsFromLocalStorage();
