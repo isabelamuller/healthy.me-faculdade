@@ -1,5 +1,4 @@
 let musicPlay = false;
-let darkMode;
 let frequency = "diário";
 let deletedGoals = [];
 let goals = [
@@ -39,10 +38,11 @@ let goals = [
     id: 7,
   },
 ];
+let darkMode = false;
 const music = document.getElementById("music");
 const musicBtn = document.getElementById("music-btn");
 const darkBtn = document.getElementById("dark-btn");
-const lightBtn = document.getElementById("light-btn");
+const body = document.body;
 const vitamins = document.getElementById("vitamins");
 const vitaminsDisplay = document.getElementById("vitamins-display-container");
 const simpleActions = document.getElementById("simple-actions");
@@ -50,13 +50,32 @@ const sports = document.getElementById("sports");
 const simpleActionsDisplay = document.getElementById("simple-actions-display");
 const sportsDisplay = document.getElementById("sports-display");
 const exercise = document.getElementById("exercise");
-const exerciseDisplay = document.getElementById("exercise-display-co");
+const exerciseDisplay = document.getElementById("exercise-display-container");
 const infoButtons = [vitamins, exercise, simpleActions, sports];
 const formChallenge = document.getElementById("form-challenge");
 const inputChallenge = document.getElementById("input-challenge");
 const goalsContainer = document.getElementById("goals-container");
 const selectFrequency = document.getElementById("frequency-select");
 const deleteButtons = document.querySelectorAll(".delete-icon");
+const coverImgAbout = document.getElementById("about-cover-img");
+const logoImg = document.getElementById("logo-img")
+
+// dark mode 
+darkBtn.addEventListener('click', () => {
+  if (darkMode === false) {
+    darkMode = true;
+    body.classList.add('dark-mode');
+    coverImgAbout.src = "../../assets/images/inverted-logo.png"
+    logoImg.src = "../../assets/images/inverted-logo.png"
+    darkBtn.src = "../../assets/images/sun.png"
+  } else {
+    darkMode = false;
+    body.classList.remove('dark-mode');
+    coverImgAbout.src = "../../assets/images/cover.png"
+    logoImg.src = "../../assets/images/cover.png"
+    darkBtn.src = "https://cdn.icon-icons.com/icons2/1674/PNG/512/moon_111148.png"
+  }
+});
 
 // display info page
 
@@ -130,25 +149,25 @@ const playMusic = () => {
 
 // dark mode
 
-darkBtn.addEventListener("click", () => {
-  toggleLightMode();
-});
+// darkBtn.addEventListener("click", () => {
+//   toggleLightMode();
+// });
 
-lightBtn.addEventListener("click", () => {
-  toggleDarkMode();
-});
+// lightBtn.addEventListener("click", () => {
+//   toggleDarkMode();
+// });
 
-const toggleLightMode = () => {
-  darkBtn.style.display = "none";
-  lightBtn.style.display = "block";
-  darkMode = false;
-};
+// const toggleLightMode = () => {
+//   darkBtn.style.display = "none";
+//   lightBtn.style.display = "block";
+//   darkMode = false;
+// };
 
-const toggleDarkMode = () => {
-  darkBtn.style.display = "block";
-  lightBtn.style.display = "none";
-  darkMode = true;
-};
+// const toggleDarkMode = () => {
+//   darkBtn.style.display = "block";
+//   lightBtn.style.display = "none";
+//   darkMode = true;
+// };
 
 // new goal creation
 
@@ -162,7 +181,17 @@ const newGoal = (goal) => {
 
   const checkbox = document.createElement("input");
   checkbox.type = "checkbox";
-
+  checkbox.addEventListener("click", (e) => {
+    const clickedElement = e.target;
+    if (clickedElement.type === "checkbox") {
+      const titleElement = clickedElement.closest(".goal").querySelector("#goal-title");
+      if (clickedElement.checked) {
+        titleElement.style.textDecoration = "line-through";
+      } else {
+        titleElement.style.textDecoration = "none";
+      }
+    }
+  });
   const titleElement = document.createElement("h1");
   titleElement.id = "goal-title";
   titleElement.textContent = goal.title;
@@ -186,7 +215,7 @@ const newGoal = (goal) => {
   rightMenu.appendChild(deleteButton);
 };
 
-// add goal to dom 
+// add goal to dom
 
 const addGoal = (e) => {
   e.preventDefault();
@@ -222,15 +251,15 @@ goalsContainer.addEventListener("click", (e) => {
     let goalId = parseInt(goal.id);
     const objectToRemove = goals.find((g) => g.id === goalId);
     deletedGoals.push(objectToRemove);
-    console.log(deletedGoals)
+    console.log(deletedGoals);
     goals = goals.filter((g) => g !== objectToRemove);
     saveGoalsToLocalStorage(goals);
-    saveDeletedGoalsToLocalStorage(deletedGoals)
+    saveDeletedGoalsToLocalStorage(deletedGoals);
   }
   saveGoalsToLocalStorage();
 });
 
-// save localStorage 
+// save localStorage
 
 const saveGoalsToLocalStorage = () => {
   localStorage.setItem("goals", JSON.stringify(goals));
@@ -240,7 +269,7 @@ const saveDeletedGoalsToLocalStorage = () => {
   localStorage.setItem("deletedGoals", JSON.stringify(deletedGoals));
 };
 
-// load localStorage 
+// load localStorage
 
 const loadGoalsFromLocalStorage = () => {
   const storedGoals = localStorage.getItem("goals");
@@ -255,7 +284,6 @@ const loadGoalsFromLocalStorage = () => {
     });
   }
 };
-
-// function calls 
+// function calls
 
 loadGoalsFromLocalStorage();

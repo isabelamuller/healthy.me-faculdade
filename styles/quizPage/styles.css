@@ -31,13 +31,16 @@
   top: 2rem;
   left: 3rem;
   font-weight: 300;
+  color: var(--color-black);
 }
 .quiz-container h3 {
   font-weight: 500;
+  color: var(--color-black);
   font-size: 1.3rem;
 }
 .quiz-container li {
   margin-top: 1.6rem;
+  color: var(--color-black);
 }
 #next-question-btn {
   padding: 0.7rem 0.7rem 0.7rem 0.7rem;
@@ -60,4 +63,8 @@
 #question-3 {
     display: none;
     width: 80%;
+}
+#question-4 {
+  display: none;
+  width: 80%;
 }
