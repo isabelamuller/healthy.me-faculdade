@@ -49,9 +49,15 @@
   color: var(--color-beige);
   margin-top: 1.5rem;
 }
-.question-1 {
-    display: none;
-}
-.question-2 {
+#question-1 {
     display: block;
+    width: 80%;
+}
+#question-2 {
+    display: none;
+    width: 80%;
+}
+#question-3 {
+    display: none;
+    width: 80%;
 }

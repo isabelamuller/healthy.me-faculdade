@@ -4,8 +4,16 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="../../styles/quizPage/styles.css" />
-    <link rel="stylesheet" type="text/css" href="../../styles/mainPage/styles.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../../styles/quizPage/styles.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../../styles/mainPage/styles.css"
+    />
     <link rel="stylesheet" type="text/css" href="../../styles/reset.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -27,15 +35,13 @@
           <ul class="nav-menu-landing-page">
             <li class="nav-menu-item">
               <a href="../../pages/mainPage/index.html" aria-label="Back"
-                >go back</a
+                >voltar</a
               >
             </li>
           </ul>
         </div>
         <div>
-          <a
-            href="../../pages/mainPage/index.html"
-            aria-label="Healthy.me Logo"
+          <a href="../../pages/mainPage/index.html" aria-label="Healthy.me Logo"
             ><img class="logo-img" src="../../assets/images/logo.png"
           /></a>
         </div>
@@ -43,77 +49,83 @@
     </header>
     <section class="quiz-page" id="quiz">
       <div class="quiz-container">
-        <div class="quiz-left-side">
-          <div class="question-1">
-            <h2>question 1 out of 5</h2>
-            <h3>
-              generally speaking, how do you usually feel each day of the week?
-            </h3>
-            <ul>
-              <li>
-                <input type="radio" id="option-1" class="option-quiz" value="1"/>
-                <label for="option-1"
-                  >mostly happy, I always try to find something good each
-                  day</label
-                >
-              </li>
-              <li>
-                <input type="radio" id="option-2" class="option-quiz" value="2"/>
-                <label for="option-2"
-                  >normal, not happy nor sad, just living
-                </label>
-              </li>
-              <li>
-                <input type="radio" id="option-3" class="option-quiz" value="3"/>
-                <label for="option-3"
-                  >numb, feeling like I live in auto mode, sometimes only
-                  feeling alive on the weekend</label
-                >
-              </li>
-              <li>
-                <input type="radio" id="option-4"  class="option-quiz" value="4"/>
-                <label for="option-4"
-                  >sad and lost, like I’m in the wrong path</label
-                >
-              </li>
-            </ul>
-          </div>
-          <div class="question-2">
-            <h2>question 2 out of 5</h2>
-            <h3>
-              generally speaking, how do you usually feel each day of the week?
-            </h3>
-            <ul>
-              <li>
-                <input type="radio" id="option-1" class="option-quiz" value="1"/>
-                <label for="option-1"
-                  >mostly happy, I always try to find something good each
-                  day</label
-                >
-              </li>
-              <li>
-                <input type="radio" id="option-2" class="option-quiz" value="2"/>
-                <label for="option-2"
-                  >normal, not happy nor sad, just living
-                </label>
-              </li>
-              <li>
-                <input type="radio" id="option-3" class="option-quiz" value="3"/>
-                <label for="option-3"
-                  >numb, feeling like I live in auto mode, sometimes only
-                  feeling alive on the weekend</label
-                >
-              </li>
-              <li>
-                <input type="radio" id="option-4"  class="option-quiz" value="4"/>
-                <label for="option-4"
-                  >sad and lost, like I’m in the wrong path</label
-                >
-              </li>
-            </ul>
-          </div>
-            <button id="next-question-btn" type="submit">next question</button>
+        <div id="question-1">
+          <h2>pergunta 1 de 5</h2>
+          <h3>de modo geral, como você se sente cada dia da semana?</h3>
+          <ul>
+            <li>
+              <input type="radio" id="option-1" class="option-quiz" value="1" />
+              <label for="option-1"
+                >majoritariamente feliz, sempre tento achar algo positivo todos
+                os dias</label
+              >
+            </li>
+            <li>
+              <input type="radio" id="option-2" class="option-quiz" value="2" />
+              <label for="option-2"
+                >normal, nem feliz nem triste, vivendo
+              </label>
+            </li>
+            <li>
+              <input type="radio" id="option-3" class="option-quiz" value="3" />
+              <label for="option-3"
+                >cansado, como se vivesse no modo automático, as vezes só me
+                sinto feliz aos fins de semana</label
+              >
+            </li>
+            <li>
+              <input type="radio" id="option-4" class="option-quiz" value="4" />
+              <label for="option-4"
+                >triste e perdido, como se não estivesse no caminho certo</label
+              >
+            </li>
+          </ul>
         </div>
+        <div id="question-2">
+          <h2>pergunta 2 de 5</h2>
+          <h3>você pratica exercícios físicos?</h3>
+          <ul>
+            <li>
+              <input type="radio" id="option-1" class="option-quiz" value="1" />
+              <label for="option-1">todos os dias ou quase todos os dias</label>
+            </li>
+            <li>
+              <input type="radio" id="option-2" class="option-quiz" value="2" />
+              <label for="option-2">2 a 4 vezes por semana </label>
+            </li>
+            <li>
+              <input type="radio" id="option-3" class="option-quiz" value="3" />
+              <label for="option-3">não muito, 4 vezes por mês ao máximo</label>
+            </li>
+            <li>
+              <input type="radio" id="option-4" class="option-quiz" value="4" />
+              <label for="option-4">nunca ou raramente</label>
+            </li>
+          </ul>
+        </div>
+        <div id="question-3">
+          <h2>pergunta 3 de 5</h2>
+          <h3>quando foi a última vez que você fez um exame de rotina?</h3>
+          <ul>
+            <li>
+              <input type="radio" id="option-1" class="option-quiz" value="1" />
+              <label for="option-1">6 meses atrás ou menos</label>
+            </li>
+            <li>
+              <input type="radio" id="option-2" class="option-quiz" value="2" />
+              <label for="option-2">1 ano atrás</label>
+            </li>
+            <li>
+              <input type="radio" id="option-3" class="option-quiz" value="3" />
+              <label for="option-3">mais de 1 ano atrás</label>
+            </li>
+            <li>
+              <input type="radio" id="option-4" class="option-quiz" value="4" />
+              <label for="option-4">não me recordo</label>
+            </li>
+          </ul>
+        </div>
+        <button id="next-question-btn" type="submit">próxima pergunta</button>
       </div>
     </section>
     <script src="../../scripts/quizPage/app.js"></script>
