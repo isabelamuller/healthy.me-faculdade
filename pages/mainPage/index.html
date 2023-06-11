@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -28,7 +28,10 @@
       <nav class="navbar">
         <div class="logo-container">
           <a href="#about-us" aria-label="Healthy.me Logo"
-            ><img class="logo-img" src="../../assets/images/logo.png"
+            ><img
+              class="logo-img"
+              id="logo-img"
+              src="../../assets/images/cover.png"
           /></a>
         </div>
         <div class="nav-menu-container">
@@ -48,9 +51,11 @@
               >
             </li>
             <li class="nav-menu-item">
-              <button class="contact-btn" aria-label="Contact Us">
-                contate-nos
-              </button>
+              <a href="../../pages/contactPage/index.html">
+                <button class="contact-btn" aria-label="Contact Us">
+                  contate-nos
+                </button>
+              </a>
             </li>
           </ul>
         </div>
@@ -63,12 +68,6 @@
           class="dark-btn"
           src="https://cdn.icon-icons.com/icons2/1674/PNG/512/moon_111148.png"
           alt="Dark Mode"
-        />
-        <img
-          id="light-btn"
-          class="light-btn"
-          src="https://www.iconpacks.net/icons/2/free-sun-icon-3337-thumb.png"
-          alt="Light Mode"
         />
         <audio
           id="music"
@@ -90,6 +89,7 @@
           <img
             src="../../assets/images/cover.png"
             class="about-cover-img"
+            id="about-cover-img"
             alt="Logo Image"
           />
           <h2>saúde na palma da sua mão!</h2>
@@ -112,7 +112,7 @@
       <div class="missions-container">
         <div class="mission-left-side">
           <div class="mission-left-content">
-            <h1 class="mission-left-title">our mission</h1>
+            <h1 class="mission-left-title">nossas missões</h1>
             <p class="mission-left-description">
               com a chegada da covid-19, as taxas de exercícios e autocuidado
               diminuíram exponencialmente. queremos trazer de volta, pouco a
@@ -325,11 +325,158 @@
                 </p>
               </div>
             </div>
-            <div id="simple-actions-display">
-              <h1>pequenas ações</h1>
+            <div id="sports-display-container">
+              <div id="sports-display">
+                <h1>esportes</h1>
+                <p>
+                  praticar esportes regularmente traz inúmeros benefícios para a
+                  saúde física e mental. abaixo estão alguns dos melhores
+                  esportes para a saúde e seus benefícios específicos:
+                </p>
+                <p>
+                  <img
+                    src="https://cdn-icons-png.flaticon.com/512/4721/4721050.png"
+                    class="info-display-icon"
+                    alt="Running icon"
+                  />
+                  <strong>corrida</strong>: a corrida é uma forma popular de
+                  exercício que fortalece o sistema cardiovascular, melhora a
+                  resistência e aumenta a capacidade pulmonar. além disso, a
+                  corrida ajuda a reduzir o estresse, melhora o humor e pode
+                  ajudar no controle de peso.
+                </p>
+                <p>
+                  <img
+                    src="https://cdn-icons-png.flaticon.com/512/625/625470.png"
+                    class="info-display-icon"
+                    alt="Swimming icon"
+                  />
+                  <strong>natação</strong>: a natação é um esporte de baixo
+                  impacto que trabalha todos os principais grupos musculares do
+                  corpo. ela melhora a resistência física, aumenta a
+                  flexibilidade e ajuda a desenvolver uma postura melhor.
+                </p>
+                <p>
+                  <img
+                    src="https://cdn-icons-png.flaticon.com/512/53/53283.png"
+                    class="info-display-icon"
+                    alt="Soccer icon"
+                  />
+                  <strong>futebol</strong>: o futebol é um esporte de equipe que
+                  oferece benefícios cardiovasculares, fortalecimento muscular e
+                  melhora na coordenação e agilidade. além disso, promove
+                  trabalho em equipe, habilidades sociais e aumenta a capacidade
+                  de concentração e tomada de decisões rápidas.
+                </p>
+                <p>
+                  <img
+                    src="https://cdn-icons-png.flaticon.com/512/2633/2633933.png"
+                    class="info-display-icon"
+                    alt="Tennis icon"
+                  />
+                  <strong>tênis</strong>: o tênis é um esporte que melhora a
+                  resistência cardiovascular, a agilidade e a coordenação
+                  motora. ele também ajuda a desenvolver força muscular,
+                  especialmente nas pernas e nos braços.
+                </p>
+                <p>
+                  <img
+                    src="https://cdn-icons-png.flaticon.com/512/889/889455.png"
+                    class="info-display-icon"
+                    alt="Basketball icon"
+                  />
+                  <strong>basquete</strong>: o basquete é um esporte dinâmico
+                  que oferece uma série de benefícios para a saúde. ele ajuda a
+                  melhorar a resistência cardiovascular, a agilidade, a
+                  coordenação e a velocidade.
+                </p>
+                <p>
+                  <img
+                    src="https://cdn-icons-png.flaticon.com/512/5496/5496293.png"
+                    class="info-display-icon"
+                    alt="Volleyball icon"
+                  />
+                  <strong>vôlei</strong>: o vôlei é um esporte de equipe
+                  emocionante que oferece uma série de benefícios para a saúde
+                  física e mental. além de ser uma atividade divertida, o vôlei
+                  pode melhorar a aptidão cardiovascular, a força muscular, a
+                  coordenação e a agilidade.
+                </p>
+              </div>
             </div>
-            <div id="sports-display">
-              <h1>esportes</h1>
+            <div id="simple-actions-display-container">
+              <div id="simple-actions-display">
+                <h1>pequenas ações</h1>
+                <p>
+                  em nosso cotidiano agitado, muitas vezes nos esquecemos de
+                  reservar um tempo para cuidar de nós mesmos e desfrutar dos
+                  pequenos prazeres da vida. no entanto, incorporar algumas
+                  ações simples em nosso dia a dia pode trazer grandes
+                  benefícios para nossa saúde física, mental e emocional.
+                </p>
+                <p>
+                  <img
+                    src="https://cdn-icons-png.flaticon.com/512/3048/3048374.png"
+                    class="info-display-icon"
+                    alt="Meditation icon"
+                  />
+                  <strong>meditar</strong>: reserve alguns minutos todos os dias
+                  para praticar a meditação. a meditação ajuda a reduzir o
+                  estresse, promove a clareza mental, melhora a concentração e
+                  promove um senso de calma e bem-estar.
+                </p>
+                <p>
+                  <img
+                    src="https://cdn-icons-png.flaticon.com/512/4072/4072217.png"
+                    class="info-display-icon"
+                    alt="Reading icon"
+                  />
+                  <strong>ler livros</strong>: dedique um tempo para ler
+                  regularmente. a leitura estimula a mente, expande o
+                  conhecimento, melhora a concentração, reduz o estresse e
+                  promove a imaginação. além disso, a leitura pode ser uma ótima
+                  forma de relaxar e se desconectar das preocupações do dia a
+                  dia.
+                </p>
+                <p>
+                  <img
+                    src="https://cdn-icons-png.flaticon.com/512/2839/2839214.png"
+                    class="info-display-icon"
+                    alt="Relationships icon"
+                  />
+                  <strong>cultivar relacionamentos significativos</strong>:
+                  dedique tempo para se conectar com pessoas importantes em sua
+                  vida, seja familiares, amigos ou entes queridos. fortalecer os
+                  relacionamentos traz benefícios emocionais, melhora a saúde
+                  mental, proporciona apoio social e promove um senso de
+                  pertencimento e felicidade.
+                </p>
+                <p>
+                  <img
+                    src="https://cdn-icons-png.flaticon.com/512/8638/8638228.png"
+                    class="info-display-icon"
+                    alt="Therapy icon"
+                  />
+                  <strong>terapia</strong>: a terapia oferece um espaço seguro
+                  para explorar emoções, desafios e objetivos pessoais, assim,
+                  você pode ganhar insights valiosos, desenvolver habilidades de
+                  enfrentamento e obter suporte para lidar com questões
+                  emocionais e mentais.
+                </p>
+                <p>
+                  <img
+                    src="https://cdn-icons-png.flaticon.com/512/4371/4371313.png"
+                    class="info-display-icon"
+                    alt="Journal icon"
+                  />
+                  <strong>manter um diário</strong>: escrever seus pensamentos,
+                  sentimentos e experiências em um diário pode ser um meio
+                  eficaz de autoexpressão e autorreflexão. além de ajudar a
+                  processar emoções e aliviar o estresse, manter um diário pode
+                  permitir que você acompanhe seu crescimento pessoal ao longo
+                  do tempo.
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -346,7 +493,10 @@
                   id="vitamins"
                   alt="vitamins icon"
                 >
-                  <img src="../../assets/images/vitamins.png" />
+                  <img
+                    src="../../assets/images/vitamins.png"
+                    id="vitamins-img"
+                  />
                   <h1>vitaminas</h1>
                 </div>
               </li>
@@ -356,13 +506,16 @@
                   id="exercise"
                   alt="exercise icon"
                 >
-                  <img src="../../assets/images/exercise.png" />
+                  <img
+                    src="../../assets/images/exercise.png"
+                    id="exercise-img"
+                  />
                   <h1>exercícios</h1>
                 </div>
               </li>
               <li>
                 <div class="sports-info-box" id="sports" alt="sports icon">
-                  <img src="../../assets/images/sports.png" />
+                  <img src="../../assets/images/sports.png" id="sports-img" />
                   <h1>esportes</h1>
                 </div>
               </li>
@@ -372,7 +525,7 @@
                   id="simple-actions"
                   alt="simple actions icon"
                 >
-                  <img src="../../assets/images/reading.png" />
+                  <img src="../../assets/images/reading.png" id="simple-img" />
                   <h1>pequenas ações</h1>
                 </div>
               </li>
@@ -393,7 +546,7 @@
           <input
             type="text"
             id="input-challenge"
-            placeholder="add your own goal!"
+            placeholder="adicione uma meta!"
           />
           <select id="frequency-select">
             <option selected>diário</option>
@@ -403,12 +556,7 @@
           </select>
           <button type="submit" class="submit-button-challenge">add</button>
         </form>
-        <div class="goals-container" id="goals-container">
-          <button id="deleted-goals-btn">show deleted</button>
-        </div>
-        <div id="deleted-goals-container">
-          <button id="non-deleted-goals-btn">show active</button>
-        </div>
+        <div class="goals-container" id="goals-container"></div>
       </div>
     </section>
     <script src="../../scripts/mainPage/app.js"></script>

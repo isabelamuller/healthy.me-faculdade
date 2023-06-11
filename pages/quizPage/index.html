@@ -42,12 +42,29 @@
         </div>
         <div>
           <a href="../../pages/mainPage/index.html" aria-label="Healthy.me Logo"
-            ><img class="logo-img" src="../../assets/images/logo.png"
+            ><img class="logo-img" id="logo-img" src="../../assets/images/logo.png"
           /></a>
         </div>
       </nav>
     </header>
     <section class="quiz-page" id="quiz">
+      <div class="settings-container">
+        <img
+          id="dark-btn"
+          class="dark-btn"
+          src="https://cdn.icon-icons.com/icons2/1674/PNG/512/moon_111148.png"
+          alt="Dark Mode"
+        />
+        <audio
+          id="music"
+          class="music"
+          src="../../assets/music/bg-music.mp3"
+          preload="auto"
+          aria-label="Background Music"
+        ></audio>
+        <button id="music-btn" aria-label="Toggle Music"></button>
+        <div class="settings-line"></div>
+      </div>
       <div class="quiz-container">
         <div id="question-1">
           <h2>pergunta 1 de 5</h2>
@@ -105,6 +122,28 @@
         </div>
         <div id="question-3">
           <h2>pergunta 3 de 5</h2>
+          <h3>quando foi a última vez que você fez um exame de rotina?</h3>
+          <ul>
+            <li>
+              <input type="radio" id="option-1" class="option-quiz" value="1" />
+              <label for="option-1">6 meses atrás ou menos</label>
+            </li>
+            <li>
+              <input type="radio" id="option-2" class="option-quiz" value="2" />
+              <label for="option-2">1 ano atrás</label>
+            </li>
+            <li>
+              <input type="radio" id="option-3" class="option-quiz" value="3" />
+              <label for="option-3">mais de 1 ano atrás</label>
+            </li>
+            <li>
+              <input type="radio" id="option-4" class="option-quiz" value="4" />
+              <label for="option-4">não me recordo</label>
+            </li>
+          </ul>
+        </div>
+        <div id="question-4">
+          <h2>pergunta 4 de 5</h2>
           <h3>quando foi a última vez que você fez um exame de rotina?</h3>
           <ul>
             <li>

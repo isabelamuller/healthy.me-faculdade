@@ -1,5 +1,4 @@
 let musicPlay = false;
-let darkMode;
 let frequency = "diário";
 let deletedGoals = [];
 let goals = [
@@ -34,34 +33,49 @@ let goals = [
     id: 6,
   },
   {
-    title: "elogiar ume estranho",
+    title: "elogiar um estranho",
     frequency: "semanal",
     id: 7,
   },
 ];
+let darkMode = false;
 const music = document.getElementById("music");
 const musicBtn = document.getElementById("music-btn");
 const darkBtn = document.getElementById("dark-btn");
-const lightBtn = document.getElementById("light-btn");
-const vitamins = document.getElementById("vitamins");
+const body = document.body;
 const vitaminsDisplay = document.getElementById("vitamins-display-container");
-const simpleActions = document.getElementById("simple-actions");
-const sports = document.getElementById("sports");
-const simpleActionsDisplay = document.getElementById("simple-actions-display");
-const sportsDisplay = document.getElementById("sports-display");
+const exerciseDisplay = document.getElementById("exercise-display-container");
+const sportsDisplay = document.getElementById("sports-display-container");
+const simpleActionsDisplay = document.getElementById("simple-actions-display-container");
+const vitamins = document.getElementById("vitamins");
 const exercise = document.getElementById("exercise");
-const exerciseDisplay = document.getElementById("exercise-display-co");
+const sports = document.getElementById("sports");
+const simpleActions = document.getElementById("simple-actions");
 const infoButtons = [vitamins, exercise, simpleActions, sports];
 const formChallenge = document.getElementById("form-challenge");
 const inputChallenge = document.getElementById("input-challenge");
 const goalsContainer = document.getElementById("goals-container");
-const deletedGoalsContainer = document.getElementById(
-  "deleted-goals-container"
-);
 const selectFrequency = document.getElementById("frequency-select");
 const deleteButtons = document.querySelectorAll(".delete-icon");
-const showDeletedGoals = document.getElementById("deleted-goals-btn");
-const showActiveGoals = document.getElementById("non-deleted-goals-btn");
+const coverImgAbout = document.getElementById("about-cover-img");
+const logoImg = document.getElementById("logo-img")
+
+// dark mode 
+darkBtn.addEventListener('click', () => {
+  if (darkMode === false) {
+    darkMode = true;
+    body.classList.add('dark-mode');
+    coverImgAbout.src = "../../assets/images/inverted-logo.png"
+    logoImg.src = "../../assets/images/inverted-logo.png"
+    darkBtn.src = "../../assets/images/sun.png"
+  } else {
+    darkMode = false;
+    body.classList.remove('dark-mode');
+    coverImgAbout.src = "../../assets/images/cover.png"
+    logoImg.src = "../../assets/images/cover.png"
+    darkBtn.src = "https://cdn.icon-icons.com/icons2/1674/PNG/512/moon_111148.png"
+  }
+});
 
 // display info page
 
@@ -133,31 +147,10 @@ const playMusic = () => {
   }
 };
 
-// dark mode
-
-darkBtn.addEventListener("click", () => {
-  toggleLightMode();
-});
-
-lightBtn.addEventListener("click", () => {
-  toggleDarkMode();
-});
-
-const toggleLightMode = () => {
-  darkBtn.style.display = "none";
-  lightBtn.style.display = "block";
-  darkMode = false;
-};
-
-const toggleDarkMode = () => {
-  darkBtn.style.display = "block";
-  lightBtn.style.display = "none";
-  darkMode = true;
-};
 
 // new goal creation
 
-const newGoal = (goal, container) => {
+const newGoal = (goal) => {
   const goalElement = document.createElement("div");
   goalElement.classList.add("goal");
   goalElement.id = goal.id;
@@ -167,7 +160,17 @@ const newGoal = (goal, container) => {
 
   const checkbox = document.createElement("input");
   checkbox.type = "checkbox";
-
+  checkbox.addEventListener("click", (e) => {
+    const clickedElement = e.target;
+    if (clickedElement.type === "checkbox") {
+      const titleElement = clickedElement.closest(".goal").querySelector("#goal-title");
+      if (clickedElement.checked) {
+        titleElement.style.textDecoration = "line-through";
+      } else {
+        titleElement.style.textDecoration = "none";
+      }
+    }
+  });
   const titleElement = document.createElement("h1");
   titleElement.id = "goal-title";
   titleElement.textContent = goal.title;
@@ -182,7 +185,7 @@ const newGoal = (goal, container) => {
   deleteButton.src = "https://cdn-icons-png.flaticon.com/512/4021/4021663.png";
   deleteButton.classList.add("delete-icon");
 
-  container.appendChild(goalElement);
+  goalsContainer.appendChild(goalElement);
   goalElement.appendChild(titleWrapper);
   titleWrapper.appendChild(checkbox);
   titleWrapper.appendChild(titleElement);
@@ -203,7 +206,7 @@ const addGoal = (e) => {
       frequency: frequency,
       id: id,
     };
-    newGoal(goal, goalsContainer);
+    newGoal(goal);
     goals.push(goal);
     saveGoalsToLocalStorage();
   }
@@ -240,6 +243,7 @@ goalsContainer.addEventListener("click", (e) => {
 const saveGoalsToLocalStorage = () => {
   localStorage.setItem("goals", JSON.stringify(goals));
 };
+
 const saveDeletedGoalsToLocalStorage = () => {
   localStorage.setItem("deletedGoals", JSON.stringify(deletedGoals));
 };
@@ -255,48 +259,10 @@ const loadGoalsFromLocalStorage = () => {
     const deletedGoalIds = deletedGoals.map((goal) => goal.id);
     goals = goals.filter((goal) => !deletedGoalIds.includes(goal.id));
     goals.forEach((goal) => {
-      newGoal(goal, goalsContainer);
+      newGoal(goal);
     });
   }
 };
+// function calls
 
-// show deleted goals
-
-showDeletedGoals.addEventListener("click", () => {
-  toggleDeletedGoalsContainer();
-});
-
-const toggleDeletedGoalsContainer = () => {
-  if (deletedGoalsContainer.style.display === "none") {
-    displayDeletedGoals();
-    deletedGoalsContainer.style.display = "flex";
-    goalsContainer.style.display = "none";
-  } else {
-    deletedGoalsContainer.style.display = "none";
-    goalsContainer.style.display = "flex";
-  }
-};
-
-const displayDeletedGoals = () => {
-  deletedGoals.forEach((goal) => {
-   newGoal(goal, deletedGoalsContainer)
-  });
-};
-
-showActiveGoals.addEventListener("click", () => {
-  toggleActiveGoalsContainer();
-});
-
-const toggleActiveGoalsContainer = () => {
-  if (deletedGoalsContainer.style.display === "flex") {
-    displayDeletedGoals();
-    deletedGoalsContainer.style.display = "none";
-    goalsContainer.style.display = "flex";
-  } else {
-    deletedGoalsContainer.style.display = "flex";
-    goalsContainer.style.display = "none";
-  }
-}
-
-saveGoalsToLocalStorage(goals);
 loadGoalsFromLocalStorage();
