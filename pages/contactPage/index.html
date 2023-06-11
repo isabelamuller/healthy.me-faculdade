@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../../styles/contactPage/styles.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../../styles/mainPage/styles.css"
+    />
+    <link rel="stylesheet" type="text/css" href="../../styles/reset.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../../styles/quizPage/styles.css"
+    />
+    <link
+      rel="icon"
+      href="../../assets/images/favicon.ico"
+      type="image/x-icon"
+    />
+    <title>agende um atendimento | healthy.me</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar-quiz">
+        <div class="nav-menu-container-quiz">
+          <ul class="nav-menu-landing-page">
+            <li class="nav-menu-item">
+              <a href="../../pages/mainPage/index.html" aria-label="Back"
+                >voltar</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div>
+          <a href="../../pages/mainPage/index.html" aria-label="Healthy.me Logo"
+            ><img
+              class="logo-img"
+              id="logo-img"
+              src="../../assets/images/logo.png"
+          /></a>
+        </div>
+      </nav>
+    </header>
+    <section class="contact-page-container">
+      <div class="contact-page-content">
+        <section class="contact-right-side">
+                <img src="../../assets/images/contact.png" class="contact-img">
+        </section>
+        <section class="contact-left-side">
+          <div class="contact-us-title-container">
+            <h1 class="contact-us-title">agende um atendimento!</h1>
+            <h2 class="contact-us-subtitle">complete com seus dados:</h2>
+          </div>
+          <form class="contact-us-form">
+              <div class="form-input-container">
+                <label for="name">nome completo<sup>*</sup></label>
+                <input type="text" name="name" class="form-input" required />
+              </div>
+              <div class="form-input-container">
+                <label for="phone">telefone</label>
+                <input type="tel" name="phone" class="form-input" required />
+              </div>
+              <div class="form-input-container">
+                <label for="email">e-mail<sup>*</sup></label>
+                <input type="email" name="email" class="form-input" required />
+              </div>
+              <div class="form-input-container">
+                <label for="city">cidade e estado<sup>*</sup></label>
+                <input type="text" name="city" class="form-input" required />
+              </div>
+
+              <div class="form-input-container">
+                <label for="day-week">dia da semana<sup>*</sup></label>
+                <select name="day-week" class="form-select" required>
+                  <option value="monday">segunda-feira</option>
+                  <option value="tuesday">terça-feira</option>
+                  <option value="wednesday">quarta-feira</option>
+                  <option value="thursday">quinta-feira</option>
+                  <option value="friday">sexta-feira</option>
+                </select>
+              </div>
+              <div class="form-input-container">
+                <label for="specialist" >especialista<sup>*</sup></label>
+                <select name="specialist" class="form-select" required>
+                  <option value="nutrition">nutrição</option>
+                  <option value="psychology">psicologia</option>
+                  <option value="dermatology">dermatologia</option>
+                  <option value="psychiatry">psiquiatria</option>
+                  <option value="general">geral</option>
+                </select>
+              </div>
+              <div class="form-input-container">
+                <label for="day-hour">turno do dia<sup>*</sup></label>
+                <select name="day-hour" class="form-select">
+                  <option>manhã</option>
+                  <option>tarde</option>
+                  <option>noite</option>
+                </select>
+              </div>
+              <div class="form-input-container">
+                <label for="message">alguma mensagem?</label>
+                <textarea
+                  name="message"
+                  class="input-message"
+                ></textarea>
+              </div>
+            <button class="submit-btn-form" type="submit">concluído</button>
+          </form>
+        </section>
+      </div>
+    </section>
+  </body>
+</html>
+<html></html>

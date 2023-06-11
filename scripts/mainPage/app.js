@@ -43,14 +43,14 @@ const music = document.getElementById("music");
 const musicBtn = document.getElementById("music-btn");
 const darkBtn = document.getElementById("dark-btn");
 const body = document.body;
-const vitamins = document.getElementById("vitamins");
 const vitaminsDisplay = document.getElementById("vitamins-display-container");
-const simpleActions = document.getElementById("simple-actions");
-const sports = document.getElementById("sports");
-const simpleActionsDisplay = document.getElementById("simple-actions-display");
-const sportsDisplay = document.getElementById("sports-display");
-const exercise = document.getElementById("exercise");
 const exerciseDisplay = document.getElementById("exercise-display-container");
+const sportsDisplay = document.getElementById("sports-display-container");
+const simpleActionsDisplay = document.getElementById("simple-actions-display-container");
+const vitamins = document.getElementById("vitamins");
+const exercise = document.getElementById("exercise");
+const sports = document.getElementById("sports");
+const simpleActions = document.getElementById("simple-actions");
 const infoButtons = [vitamins, exercise, simpleActions, sports];
 const formChallenge = document.getElementById("form-challenge");
 const inputChallenge = document.getElementById("input-challenge");
@@ -147,27 +147,6 @@ const playMusic = () => {
   }
 };
 
-// dark mode
-
-// darkBtn.addEventListener("click", () => {
-//   toggleLightMode();
-// });
-
-// lightBtn.addEventListener("click", () => {
-//   toggleDarkMode();
-// });
-
-// const toggleLightMode = () => {
-//   darkBtn.style.display = "none";
-//   lightBtn.style.display = "block";
-//   darkMode = false;
-// };
-
-// const toggleDarkMode = () => {
-//   darkBtn.style.display = "block";
-//   lightBtn.style.display = "none";
-//   darkMode = true;
-// };
 
 // new goal creation
 
