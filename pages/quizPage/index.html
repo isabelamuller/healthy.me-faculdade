@@ -26,7 +26,7 @@
       href="../../assets/images/favicon.ico"
       type="image/x-icon"
     />
-    <title>take our quiz</title>
+    <title>faça nosso quiz | healthy.me</title>
   </head>
   <body>
     <header>
@@ -48,51 +48,34 @@
       </nav>
     </header>
     <section class="quiz-page" id="quiz">
-      <div class="settings-container">
-        <img
-          id="dark-btn"
-          class="dark-btn"
-          src="https://cdn.icon-icons.com/icons2/1674/PNG/512/moon_111148.png"
-          alt="Dark Mode"
-        />
-        <audio
-          id="music"
-          class="music"
-          src="../../assets/music/bg-music.mp3"
-          preload="auto"
-          aria-label="Background Music"
-        ></audio>
-        <button id="music-btn" aria-label="Toggle Music"></button>
-        <div class="settings-line"></div>
-      </div>
       <div class="quiz-container">
         <div id="question-1">
           <h2>pergunta 1 de 5</h2>
           <h3>de modo geral, como você se sente cada dia da semana?</h3>
           <ul>
             <li>
-              <input type="radio" id="option-1" class="option-quiz" value="1" />
-              <label for="option-1"
+              <input type="radio" id="q1-option-1" class="option-quiz" value="1" />
+              <label for="q1-option-1"
                 >majoritariamente feliz, sempre tento achar algo positivo todos
                 os dias</label
               >
             </li>
             <li>
-              <input type="radio" id="option-2" class="option-quiz" value="2" />
-              <label for="option-2"
+              <input type="radio" id="q1-option-2" class="option-quiz" value="2" />
+              <label for="q1-option-2"
                 >normal, nem feliz nem triste, vivendo
               </label>
             </li>
             <li>
-              <input type="radio" id="option-3" class="option-quiz" value="3" />
-              <label for="option-3"
+              <input type="radio" id="q1-option-3" class="option-quiz" value="3" />
+              <label for="q1-option-3"
                 >cansado, como se vivesse no modo automático, as vezes só me
                 sinto feliz aos fins de semana</label
               >
             </li>
             <li>
-              <input type="radio" id="option-4" class="option-quiz" value="4" />
-              <label for="option-4"
+              <input type="radio" id="q1-option-4" class="option-quiz" value="4" />
+              <label for="q1-option-4"
                 >triste e perdido, como se não estivesse no caminho certo</label
               >
             </li>
@@ -103,20 +86,20 @@
           <h3>você pratica exercícios físicos?</h3>
           <ul>
             <li>
-              <input type="radio" id="option-1" class="option-quiz" value="1" />
-              <label for="option-1">todos os dias ou quase todos os dias</label>
+              <input type="radio" id="q2-option-1" class="option-quiz" value="1" />
+              <label for="q2-option-1">todos os dias ou quase todos os dias</label>
             </li>
             <li>
-              <input type="radio" id="option-2" class="option-quiz" value="2" />
-              <label for="option-2">2 a 4 vezes por semana </label>
+              <input type="radio" id="q2-option-2" class="option-quiz" value="2" />
+              <label for="q2-option-2">2 a 4 vezes por semana </label>
             </li>
             <li>
-              <input type="radio" id="option-3" class="option-quiz" value="3" />
-              <label for="option-3">não muito, 4 vezes por mês ao máximo</label>
+              <input type="radio" id="q2-option-3" class="option-quiz" value="3" />
+              <label for="q2option-3">não muito, 4 vezes por mês ao máximo</label>
             </li>
             <li>
-              <input type="radio" id="option-4" class="option-quiz" value="4" />
-              <label for="option-4">nunca ou raramente</label>
+              <input type="radio" id="q2-option-4" class="option-quiz" value="4" />
+              <label for="q2-option-4">nunca ou raramente</label>
             </li>
           </ul>
         </div>
@@ -125,42 +108,64 @@
           <h3>quando foi a última vez que você fez um exame de rotina?</h3>
           <ul>
             <li>
-              <input type="radio" id="option-1" class="option-quiz" value="1" />
-              <label for="option-1">6 meses atrás ou menos</label>
+              <input type="radio" id="q3-option-1" class="option-quiz" value="1" />
+              <label for="q3-option-1">6 meses atrás ou menos</label>
             </li>
             <li>
-              <input type="radio" id="option-2" class="option-quiz" value="2" />
-              <label for="option-2">1 ano atrás</label>
+              <input type="radio" id="q3-option-2" class="option-quiz" value="2" />
+              <label for="q3-option-2">1 ano atrás</label>
             </li>
             <li>
-              <input type="radio" id="option-3" class="option-quiz" value="3" />
-              <label for="option-3">mais de 1 ano atrás</label>
+              <input type="radio" id="q3-option-3" class="option-quiz" value="3" />
+              <label for="q3-option-3">mais de 1 ano atrás</label>
             </li>
             <li>
-              <input type="radio" id="option-4" class="option-quiz" value="4" />
-              <label for="option-4">não me recordo</label>
+              <input type="radio" id="q3-option-4" class="option-quiz" value="4" />
+              <label for="q3-option-4">não me recordo</label>
             </li>
           </ul>
         </div>
         <div id="question-4">
           <h2>pergunta 4 de 5</h2>
-          <h3>quando foi a última vez que você fez um exame de rotina?</h3>
+          <h3>você diria que tem hobbies?</h3>
           <ul>
             <li>
-              <input type="radio" id="option-1" class="option-quiz" value="1" />
-              <label for="option-1">6 meses atrás ou menos</label>
+              <input type="radio" id="q4-option-1" class="option-quiz" value="1" />
+              <label for="q4-option-1">sim, me considero uma pessoa com muitos interesses e invisto neles</label>
             </li>
             <li>
-              <input type="radio" id="option-2" class="option-quiz" value="2" />
-              <label for="option-2">1 ano atrás</label>
+              <input type="radio" id="q4-option-2" class="option-quiz" value="2" />
+              <label for="option-2">sim, mas acabo não dando a atenção devida a eles</label>
             </li>
             <li>
-              <input type="radio" id="option-3" class="option-quiz" value="3" />
-              <label for="option-3">mais de 1 ano atrás</label>
+              <input type="radio" id="q4-option-3" class="option-quiz" value="3" />
+              <label for="q4-option-3">mais ou menos, tenho um ou outro hobby</label>
             </li>
             <li>
-              <input type="radio" id="option-4" class="option-quiz" value="4" />
-              <label for="option-4">não me recordo</label>
+              <input type="radio" id="q4-option-4" class="option-quiz" value="4" />
+              <label for="q4-option-4">não me considero uma pessoa com hobbies</label>
+            </li>
+          </ul>
+        </div>
+        <div id="question-5">
+          <h2>pergunta 5 de 5</h2>
+          <h3>você faz terapia?</h3>
+          <ul>
+            <li>
+              <input type="radio" id="q5-option-1" class="option-quiz" value="1" />
+              <label for="q5-option-1">sim, faço terapia há anos</label>
+            </li>
+            <li>
+              <input type="radio" id="q5-option-2" class="option-quiz" value="2" />
+              <label for="q5-option-2">sim, comecei recentemente</label>
+            </li>
+            <li>
+              <input type="radio" id="q5-option-3" class="option-quiz" value="3" />
+              <label for="q5-option-3">não, mas tenho vontade</label>
+            </li>
+            <li>
+              <input type="radio" id="q5-option-4" class="option-quiz" value="4" />
+              <label for="q5-option-4">não e não tenho vontade</label>
             </li>
           </ul>
         </div>
