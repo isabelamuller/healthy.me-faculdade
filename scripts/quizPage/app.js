@@ -1,19 +1,18 @@
 let counter = 0;
 let optionClicked;
+let optionClickedValue;
 let currentQuestion = 1;
 const checkboxes = document.querySelectorAll('input[type="radio"]');
-const options = document.querySelectorAll('.question-option');
+const options = document.querySelectorAll(".option-quiz");
 const nextQuestion = document.getElementById("next-question-btn");
-// const option1 = document.getElementById("option-1");
-// const option2 = document.getElementById("option-2");
-// const option3 = document.getElementById("option-3");
-// const option4 = document.getElementById("option-4");
-// const options = [option1, option2, option3, option4];
 const question1 = document.getElementById("question-1");
 const question2 = document.getElementById("question-2");
 const question3 = document.getElementById("question-3");
 const question4 = document.getElementById("question-4");
 const question5 = document.getElementById("question-5");
+const resultsBad = document.getElementById("results-quiz-1");
+const resultsMedium = document.getElementById("results-quiz-2");
+const resultsGood = document.getElementById("results-quiz-3");
 
 checkboxes.forEach((checkbox) => {
   checkbox.addEventListener("click", (e) => {
@@ -26,14 +25,24 @@ checkboxes.forEach((checkbox) => {
 });
 
 options.forEach((option) => {
-  
-})
+  option.addEventListener("click", (e) => {
+    optionClicked = e.target;
+    optionClickedValue = optionClicked.value;
+  });
+});
+
+const results = (counter) => {
+  if (counter >= 15) {
+    resultsBad.style.display = "flex"
+  } else if (counter >= 9 && counter <= 14) {
+    resultsMedium.style.display = "flex"
+  } else {
+    resultsGood.style.display = "flex"
+  }
+};
 
 nextQuestion.addEventListener("click", (e) => {
-  optionClicked = e.target;
-  console.log(optionClicked)
-  // counter = parseInt(optionClicked.value) + counter;
-  // optionClicked = "";
+  counter += parseInt(optionClickedValue);
 
   switch (currentQuestion) {
     case 1:
@@ -50,6 +59,10 @@ nextQuestion.addEventListener("click", (e) => {
       break;
     case 5:
       question5.style.display = "none";
+      break;
+    case 6:
+      nextQuestion.style.display = "none";
+      results(counter);
       break;
   }
 
@@ -68,11 +81,15 @@ nextQuestion.addEventListener("click", (e) => {
     case 5:
       question5.style.display = "block";
       break;
+    case 6:
+      nextQuestion.style.display = "none";
+      results(counter);
+      break;
   }
 });
 
-options.forEach((option) => {
-  option.addEventListener("click", (e) => {
-    optionClicked = e.target;
-  });
-});
+// regras:
+// quanto maior o score, "pior" o resultado.
+// ruim 15 a 20
+// medio 9 a 14
+// bom 5 a 8
