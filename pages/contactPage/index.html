@@ -57,35 +57,69 @@
     </header>
     <section class="contact-page-container">
       <div class="contact-page-content">
-        <section class="contact-right-side">
+        <section class="contact-left-side">
           <img src="../../assets/images/contact.png" class="contact-img" />
         </section>
-        <section class="contact-left-side">
+        <section class="contact-right-side">
           <div class="contact-us-title-container">
             <h1 class="contact-us-title">agende um atendimento!</h1>
             <h2 class="contact-us-subtitle">complete com seus dados:</h2>
           </div>
           <form class="contact-us-form">
             <div class="form-input-container">
-              <label for="name">nome completo<sup>*</sup></label>
-              <input id="name-form-field" type="text" name="name" class="form-input" required />
+              <label class="field-title" for="name"
+                >nome completo<sup>*</sup></label
+              >
+              <input
+                id="name-form-field"
+                type="text"
+                name="name"
+                class="form-input"
+                required
+              />
             </div>
             <div class="form-input-container">
-              <label for="phone">telefone</label>
-              <input id="phone-form-field" type="tel" name="phone" class="form-input" />
+              <label class="field-title" for="phone">telefone</label>
+              <input
+                id="phone-form-field"
+                type="tel"
+                name="phone"
+                class="form-input"
+              />
             </div>
             <div class="form-input-container">
-              <label for="email">e-mail<sup>*</sup></label>
-              <input id="email-form-field" type="email" name="email" class="form-input" required />
+              <label class="field-title" for="email">e-mail<sup>*</sup></label>
+              <input
+                id="email-form-field"
+                type="email"
+                name="email"
+                class="form-input"
+                required
+              />
             </div>
             <div class="form-input-container">
-              <label for="city">cidade e estado<sup>*</sup></label>
-              <input id="city-form-field" type="text" name="city" class="form-input" required />
+              <label class="field-title" for="city"
+                >cidade e estado<sup>*</sup></label
+              >
+              <input
+                id="city-form-field"
+                type="text"
+                name="city"
+                class="form-input"
+                required
+              />
             </div>
 
             <div class="form-input-container">
-              <label for="day-week">dia da semana<sup>*</sup></label>
-              <select id="day-week-form-field" name="day-week" class="form-select" required>
+              <label class="field-title" for="day-week"
+                >dia da semana<sup>*</sup></label
+              >
+              <select
+                id="day-week-form-field"
+                name="day-week"
+                class="form-select"
+                required
+              >
                 <option value="segunda">segunda-feira</option>
                 <option value="terça">terça-feira</option>
                 <option value="quarta">quarta-feira</option>
@@ -94,8 +128,15 @@
               </select>
             </div>
             <div class="form-input-container">
-              <label for="specialist">especialista<sup>*</sup></label>
-              <select id="specialist-form-field" name="specialist" class="form-select" required>
+              <label class="field-title" for="specialist"
+                >especialista<sup>*</sup></label
+              >
+              <select
+                id="specialist-form-field"
+                name="specialist"
+                class="form-select"
+                required
+              >
                 <option value="nutrição">nutrição</option>
                 <option value="psicologia">psicologia</option>
                 <option value="dermatologia">dermatologia</option>
@@ -104,7 +145,9 @@
               </select>
             </div>
             <div class="form-input-container">
-              <label for="day-hour">turno do dia<sup>*</sup></label>
+              <label class="field-title" for="day-hour"
+                >turno do dia<sup>*</sup></label
+              >
               <select id="hour-form-field" name="day-hour" class="form-select">
                 <option value="manhã">manhã</option>
                 <option value="tarde">tarde</option>
@@ -112,8 +155,12 @@
               </select>
             </div>
             <div class="form-input-container">
-              <label for="message">alguma mensagem?</label>
-              <textarea id="message-form-field" name="message" class="input-message"></textarea>
+              <label class="field-title" for="message">alguma mensagem?</label>
+              <textarea
+                id="message-form-field"
+                name="message"
+                class="input-message"
+              ></textarea>
             </div>
             <button class="submit-btn-form" id="submit-btn-form" type="submit">
               concluído
