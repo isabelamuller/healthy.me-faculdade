@@ -13,7 +13,6 @@ const question5 = document.getElementById("question-5");
 const resultsBad = document.getElementById("results-quiz-1");
 const resultsMedium = document.getElementById("results-quiz-2");
 const resultsGood = document.getElementById("results-quiz-3");
-const resultsCounterTitle = document.getElementById("results-counter");
 
 checkboxes.forEach((checkbox) => {
   checkbox.addEventListener("click", (e) => {
@@ -34,13 +33,12 @@ options.forEach((option) => {
 
 const results = (counter) => {
   if (counter >= 15) {
-    resultsBad.style.display = "block"
+    resultsBad.style.display = "flex"
   } else if (counter >= 9 && counter <= 14) {
-    resultsMedium.style.display = "block"
+    resultsMedium.style.display = "flex"
   } else {
-    resultsGood.style.display = "block"
+    resultsGood.style.display = "flex"
   }
-  resultsCounterTitle.textContent = "seu resultado foi: ", counter.toString(); 
 };
 
 nextQuestion.addEventListener("click", (e) => {
