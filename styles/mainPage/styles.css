@@ -496,6 +496,7 @@ html {
 }
 .info-right-content div {
   transition-duration: 200ms;
+  color: #321d05;
 }
 .info-right-content div:hover {
   transform: scale(0.97);
@@ -588,6 +589,8 @@ html {
   display: flex;
   width: 70%;
   justify-content: center;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--color-brown);
 }
 
 /* form challenge  */
@@ -690,4 +693,85 @@ html {
   width: 1.5rem;
   height: auto;
   cursor: pointer;
+}
+
+/* contact us page  */
+
+.contact-us-page {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  background-color: var(--color-beige);
+  display: flex;
+  justify-content: center;
+}
+.contact-us-container-lp {
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+.contact-us-title-lp {
+  font-size: 3rem;
+  color: var(--color-brown);
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--color-brown);
+  max-width: 60%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.contact-us-subtitle-lp {
+  font-weight: 400;
+  color: var(--color-brown);
+  max-width: 50rem;
+  width: 100%;
+  text-align: center;
+  line-height: 23px;
+}
+.contact-us-content-lp {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 2.5rem;
+  margin-top: 1.5rem;
+}
+.contact-person h1 {
+  font-weight: 500;
+  padding-bottom: 0.5rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid var(--color-brown);
+  margin-top: 0.4rem;
+  color: var(--color-brown);
+}
+.contact-person {
+  background-color: var(--color-even-lighter-brown);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 0 9px 1.5px rgba(0, 0, 0, 0.1);
+}
+.contact-person-picture {
+  border-radius: 50%;
+  border: 1px solid var(--color-brown);
+  box-shadow: 0 0 9px 1.5px rgba(0, 0, 0, 0.1);
+  max-width: 13rem;
+  width: 100%;
+}
+.socials-container {
+  display: flex;
+  gap: 0.8rem;
+  margin-top: 0.2rem;
+}
+.social-icon {
+  cursor: pointer;
+  width: auto;
+  height: 2rem;
 }
