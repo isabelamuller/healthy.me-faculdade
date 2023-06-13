@@ -58,7 +58,7 @@
     <section class="contact-page-container">
       <div class="contact-page-content">
         <section class="contact-right-side">
-                <img src="../../assets/images/contact.png" class="contact-img">
+          <img src="../../assets/images/contact.png" class="contact-img" />
         </section>
         <section class="contact-left-side">
           <div class="contact-us-title-container">
@@ -66,63 +66,63 @@
             <h2 class="contact-us-subtitle">complete com seus dados:</h2>
           </div>
           <form class="contact-us-form">
-              <div class="form-input-container">
-                <label for="name">nome completo<sup>*</sup></label>
-                <input type="text" name="name" class="form-input" required />
-              </div>
-              <div class="form-input-container">
-                <label for="phone">telefone</label>
-                <input type="tel" name="phone" class="form-input" required />
-              </div>
-              <div class="form-input-container">
-                <label for="email">e-mail<sup>*</sup></label>
-                <input type="email" name="email" class="form-input" required />
-              </div>
-              <div class="form-input-container">
-                <label for="city">cidade e estado<sup>*</sup></label>
-                <input type="text" name="city" class="form-input" required />
-              </div>
+            <div class="form-input-container">
+              <label for="name">nome completo<sup>*</sup></label>
+              <input id="name-form-field" type="text" name="name" class="form-input" required />
+            </div>
+            <div class="form-input-container">
+              <label for="phone">telefone</label>
+              <input id="phone-form-field" type="tel" name="phone" class="form-input" />
+            </div>
+            <div class="form-input-container">
+              <label for="email">e-mail<sup>*</sup></label>
+              <input id="email-form-field" type="email" name="email" class="form-input" required />
+            </div>
+            <div class="form-input-container">
+              <label for="city">cidade e estado<sup>*</sup></label>
+              <input id="city-form-field" type="text" name="city" class="form-input" required />
+            </div>
 
-              <div class="form-input-container">
-                <label for="day-week">dia da semana<sup>*</sup></label>
-                <select name="day-week" class="form-select" required>
-                  <option value="monday">segunda-feira</option>
-                  <option value="tuesday">terça-feira</option>
-                  <option value="wednesday">quarta-feira</option>
-                  <option value="thursday">quinta-feira</option>
-                  <option value="friday">sexta-feira</option>
-                </select>
-              </div>
-              <div class="form-input-container">
-                <label for="specialist" >especialista<sup>*</sup></label>
-                <select name="specialist" class="form-select" required>
-                  <option value="nutrition">nutrição</option>
-                  <option value="psychology">psicologia</option>
-                  <option value="dermatology">dermatologia</option>
-                  <option value="psychiatry">psiquiatria</option>
-                  <option value="general">geral</option>
-                </select>
-              </div>
-              <div class="form-input-container">
-                <label for="day-hour">turno do dia<sup>*</sup></label>
-                <select name="day-hour" class="form-select">
-                  <option>manhã</option>
-                  <option>tarde</option>
-                  <option>noite</option>
-                </select>
-              </div>
-              <div class="form-input-container">
-                <label for="message">alguma mensagem?</label>
-                <textarea
-                  name="message"
-                  class="input-message"
-                ></textarea>
-              </div>
-            <button class="submit-btn-form" type="submit">concluído</button>
+            <div class="form-input-container">
+              <label for="day-week">dia da semana<sup>*</sup></label>
+              <select id="day-week-form-field" name="day-week" class="form-select" required>
+                <option value="segunda">segunda-feira</option>
+                <option value="terça">terça-feira</option>
+                <option value="quarta">quarta-feira</option>
+                <option value="quinta">quinta-feira</option>
+                <option value="sexta">sexta-feira</option>
+              </select>
+            </div>
+            <div class="form-input-container">
+              <label for="specialist">especialista<sup>*</sup></label>
+              <select id="specialist-form-field" name="specialist" class="form-select" required>
+                <option value="nutrição">nutrição</option>
+                <option value="psicologia">psicologia</option>
+                <option value="dermatologia">dermatologia</option>
+                <option value="psiquiatria">psiquiatria</option>
+                <option value="geral">geral</option>
+              </select>
+            </div>
+            <div class="form-input-container">
+              <label for="day-hour">turno do dia<sup>*</sup></label>
+              <select id="hour-form-field" name="day-hour" class="form-select">
+                <option value="manhã">manhã</option>
+                <option value="tarde">tarde</option>
+                <option value="noite">noite</option>
+              </select>
+            </div>
+            <div class="form-input-container">
+              <label for="message">alguma mensagem?</label>
+              <textarea id="message-form-field" name="message" class="input-message"></textarea>
+            </div>
+            <button class="submit-btn-form" id="submit-btn-form" type="submit">
+              concluído
+            </button>
           </form>
         </section>
       </div>
     </section>
   </body>
+  <script src="../../scripts/contactPage/app.js"></script>
 </html>
 <html></html>
