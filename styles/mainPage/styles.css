@@ -575,7 +575,8 @@ html {
   align-items: end;
 }
 .challenge-container {
-  width: 70vw;
+  max-width: 70rem;
+  width: 100%;
   height: 85vh;
   display: flex;
   flex-direction: column;
@@ -637,7 +638,8 @@ html {
 /* goals  */
 
 .goals-container {
-  width: 75%;
+  max-width: 60rem;
+  width: 100%;
   height: 100%;
   background-color: var(--color-dark-beige);
   padding: 2rem;
@@ -713,6 +715,8 @@ html {
   justify-content: center;
   align-items: center;
   gap: 1.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 .contact-us-title-lp {
   font-size: 3rem;
@@ -774,4 +778,25 @@ html {
   cursor: pointer;
   width: auto;
   height: 2rem;
+}
+
+@media (max-width: 1400px) {
+  .mission-left-description {
+    font-size: .8rem;
+    line-height: 15px;
+  }
+}
+@media (max-width: 1075px) {
+  .card-title {
+    font-size: .8rem;
+  }
+  .card-description {
+    font-size: .7rem;
+  }
+  .navbar {
+    gap:0;
+  }
+  .nav-menu-item a {
+    font-size: .7rem;
+  }
 }
