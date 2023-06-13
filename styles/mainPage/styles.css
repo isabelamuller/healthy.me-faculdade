@@ -29,6 +29,7 @@
 html {
   scroll-behavior: smooth;
   background-color: var(--color-beige);
+  overflow-x: hidden;
 }
 
 /* navbar */
@@ -114,7 +115,8 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--color-beige);
+  /* background-color: var(--color-beige); */
+  background-color: red;
   background-image: url("../../assets/images/plant1.png");
   background-repeat: no-repeat;
   background-position: left 5% bottom;
