@@ -20,5 +20,6 @@ submitBtn.addEventListener("click", (e) => {
     timeOfDay: hourForm.value,
     message: messageForm.value,
   };
+  console.log(formData)
   formData = {};
 });
