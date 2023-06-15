@@ -79,28 +79,28 @@ darkBtn.addEventListener('click', () => {
 
 // display info page
 
-const toggleInfoBtn = (e) => {
-  const clickedButton = e.target;
-  switch (clickedButton) {
-    case vitamins:
-      vitaminsDisplay.style.display = "block";
-      simpleActionsDisplay.style.display = "none";
+const toggleInfoBtn = (e) => { // criacao da funcao toggleInfoBtn, que sera acionada quando um dos infoButtons forem clicados
+  const clickedButton = e.target; // constante clickedButton recebe o componente que foi clicado com e.target
+  switch (clickedButton) { // switch case, dependendo do botão clicado, define o estilo de exibição 
+    case vitamins: // caso clicar em vitaminas
+      vitaminsDisplay.style.display = "block"; // ele aparece na tela
+      simpleActionsDisplay.style.display = "none"; // e todos os outros nao 
       exerciseDisplay.style.display = "none";
       sportsDisplay.style.display = "none";
       break;
-    case simpleActions:
+    case simpleActions: // mesma coisa
       vitaminsDisplay.style.display = "none";
       simpleActionsDisplay.style.display = "block";
       exerciseDisplay.style.display = "none";
       sportsDisplay.style.display = "none";
       break;
-    case exercise:
+    case exercise: // mesma coisa
       vitaminsDisplay.style.display = "none";
       simpleActionsDisplay.style.display = "none";
       exerciseDisplay.style.display = "block";
       sportsDisplay.style.display = "none";
       break;
-    case sports:
+    case sports: // mesma coisa
       vitaminsDisplay.style.display = "none";
       simpleActionsDisplay.style.display = "none";
       exerciseDisplay.style.display = "none";
@@ -111,8 +111,8 @@ const toggleInfoBtn = (e) => {
   }
 };
 
-infoButtons.forEach((button) => {
-  button.addEventListener("click", toggleInfoBtn);
+infoButtons.forEach((button) => { // para cada infoButtons
+  button.addEventListener("click", toggleInfoBtn); // é adicionado um evento de click, e caso seja clicado, ativa a funcao toggleInfoBtn
 });
 
 // play music
@@ -263,6 +263,7 @@ const loadGoalsFromLocalStorage = () => {
     });
   }
 };
+
 // function calls
 
 loadGoalsFromLocalStorage();
