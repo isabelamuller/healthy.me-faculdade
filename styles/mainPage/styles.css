@@ -794,7 +794,7 @@ html {
     padding: 0rem 0.8rem 0.8rem 0.8rem;
   }
   .mission-left-content {
-    gap:1rem;
+    gap: 1rem;
   }
 }
 @media (max-width: 1075px) {

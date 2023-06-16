@@ -46,7 +46,9 @@ const body = document.body;
 const vitaminsDisplay = document.getElementById("vitamins-display-container");
 const exerciseDisplay = document.getElementById("exercise-display-container");
 const sportsDisplay = document.getElementById("sports-display-container");
-const simpleActionsDisplay = document.getElementById("simple-actions-display-container");
+const simpleActionsDisplay = document.getElementById(
+  "simple-actions-display-container"
+);
 const vitamins = document.getElementById("vitamins");
 const exercise = document.getElementById("exercise");
 const sports = document.getElementById("sports");
@@ -58,33 +60,37 @@ const goalsContainer = document.getElementById("goals-container");
 const selectFrequency = document.getElementById("frequency-select");
 const deleteButtons = document.querySelectorAll(".delete-icon");
 const coverImgAbout = document.getElementById("about-cover-img");
-const logoImg = document.getElementById("logo-img")
+const logoImg = document.getElementById("logo-img");
 
-// dark mode 
-darkBtn.addEventListener('click', () => {
+// dark mode
+darkBtn.addEventListener("click", () => {
   if (darkMode === false) {
     darkMode = true;
-    body.classList.add('dark-mode');
-    coverImgAbout.src = "../../assets/images/inverted-logo.png"
-    logoImg.src = "../../assets/images/inverted-logo.png"
-    darkBtn.src = "../../assets/images/sun.png"
+    body.classList.add("dark-mode");
+    coverImgAbout.src = "../../assets/images/inverted-logo.png";
+    logoImg.src = "../../assets/images/inverted-logo.png";
+    darkBtn.src = "../../assets/images/sun.png";
   } else {
     darkMode = false;
-    body.classList.remove('dark-mode');
-    coverImgAbout.src = "../../assets/images/cover.png"
-    logoImg.src = "../../assets/images/cover.png"
-    darkBtn.src = "https://cdn.icon-icons.com/icons2/1674/PNG/512/moon_111148.png"
+    body.classList.remove("dark-mode");
+    coverImgAbout.src = "../../assets/images/cover.png";
+    logoImg.src = "../../assets/images/cover.png";
+    darkBtn.src =
+      "https://cdn.icon-icons.com/icons2/1674/PNG/512/moon_111148.png";
   }
 });
 
 // display info page
 
-const toggleInfoBtn = (e) => { // criacao da funcao toggleInfoBtn, que sera acionada quando um dos infoButtons forem clicados
+const toggleInfoBtn = (e) => {
+  // criacao da funcao toggleInfoBtn, que sera acionada quando um dos infoButtons forem clicados
   const clickedButton = e.target; // constante clickedButton recebe o componente que foi clicado com e.target
-  switch (clickedButton) { // switch case, dependendo do botão clicado, define o estilo de exibição 
+  switch (
+    clickedButton // switch case, dependendo do botão clicado, define o estilo de exibição
+  ) {
     case vitamins: // caso clicar em vitaminas
       vitaminsDisplay.style.display = "block"; // ele aparece na tela
-      simpleActionsDisplay.style.display = "none"; // e todos os outros nao 
+      simpleActionsDisplay.style.display = "none"; // e todos os outros nao
       exerciseDisplay.style.display = "none";
       sportsDisplay.style.display = "none";
       break;
@@ -111,7 +117,8 @@ const toggleInfoBtn = (e) => { // criacao da funcao toggleInfoBtn, que sera acio
   }
 };
 
-infoButtons.forEach((button) => { // para cada infoButtons
+infoButtons.forEach((button) => {
+  // para cada infoButtons
   button.addEventListener("click", toggleInfoBtn); // é adicionado um evento de click, e caso seja clicado, ativa a funcao toggleInfoBtn
 });
 
@@ -147,7 +154,6 @@ const playMusic = () => {
   }
 };
 
-
 // new goal creation
 
 const newGoal = (goal) => {
@@ -163,7 +169,9 @@ const newGoal = (goal) => {
   checkbox.addEventListener("click", (e) => {
     const clickedElement = e.target;
     if (clickedElement.type === "checkbox") {
-      const titleElement = clickedElement.closest(".goal").querySelector("#goal-title");
+      const titleElement = clickedElement
+        .closest(".goal")
+        .querySelector("#goal-title");
       if (clickedElement.checked) {
         titleElement.style.textDecoration = "line-through";
       } else {
