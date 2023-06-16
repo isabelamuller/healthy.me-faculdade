@@ -33,11 +33,11 @@ options.forEach((option) => {
 
 const results = (counter) => {
   if (counter >= 15) {
-    resultsBad.style.display = "flex"
+    resultsBad.style.display = "flex";
   } else if (counter >= 9 && counter <= 14) {
-    resultsMedium.style.display = "flex"
+    resultsMedium.style.display = "flex";
   } else {
-    resultsGood.style.display = "flex"
+    resultsGood.style.display = "flex";
   }
 };
 
